@@ -35,7 +35,7 @@ body, html {
 .logo {
   position: relative;
   width: 50vw; /* Adjust the size as needed */
-  max-width: 900px; /* Ensure the logo doesn't get too large */
+  max-width: 1000px; /* Ensure the logo doesn't get too large */
   z-index: 2; /* Ensure the logo is on top */
   margin-bottom: 20px;
   filter: drop-shadow(0 0 5px #000000) drop-shadow(0 0 10px #000000) drop-shadow(0 0 20px #000000) drop-shadow(0 0 30px #000000);
