@@ -1,462 +1,110 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000; /* Black background color */
-  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+ /* Logo size */
+ .logo {
+  width: 150px;
+  height: auto;
+  transition: filter 0.5s ease;
 }
 
-.container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* In dark mode, invert the logo's colors */
+.dark-mode .logo {
+  filter: invert(1);
 }
 
-.background {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background: #000000;
-  overflow: hidden;
-  z-index: 1; /* Behind the logo */
-}
-
-.logo {
-  position: relative;
-  width: 50vw; /* Adjust the size as needed */
-  max-width: 1000px; /* Ensure the logo doesn't get too large */
-  z-index: 2; /* Ensure the logo is on top */
-  margin-bottom: 20px;
-  filter: drop-shadow(0 0 5px #000000) drop-shadow(0 0 10px #000000) drop-shadow(0 0 20px #000000) drop-shadow(0 0 30px #000000);
-}
-
-.logo-link {
-  text-decoration: none; /* Remove underline */
-}
-
-.logo-link:focus {
-  outline: none; /* Remove focus outline */
-}
-
-.btn {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #000; /* Black text color */
-  background-color: #fff; /* White background color */
-  border: 2px solid #fff; /* White border */
-  border-radius: 30px; /* Rounded corners */
-  text-align: center;
+/* Navigation link styling */
+.nav-link {
+  color: #000;
+  margin-right: 20px;
   text-decoration: none;
-  font-size: 1.5vw; /* Responsive font size */
-  font-size: 24px; /* Maximum font size */
-  z-index: 2; /* Ensure the button is on top */
-  margin-top: 20px;
-  transition: all 0.3s ease; /* Smooth transition */
 }
 
-.btn:hover {
-  background-color: #000; /* Black background on hover */
-  color: #fff; /* White text on hover */
-  border: 2px solid #fff; /* White border */
+.nav-link:hover {
+  text-decoration: underline;
 }
 
-.coming-soon {
-  position: relative;
-  color: white;
-  font-size: 5vw; /* Adjust the size as needed */
-  font-size: 38px; /* Ensure the text doesn't get too large */
-  z-index: 2; /* Ensure the text is on top */
+/* Dark theme styling */
+body.dark-mode {
+  background-color: #000;
+  color: #f8f9fa;
+}
+
+.dark-mode .navbar, .dark-mode .footer {
+  background-color: #343a40;
+}
+
+.dark-mode .hero-section {
+  background-color: #111;
+}
+
+.dark-mode .nav-link {
+  color: #f8f9fa;
+}
+
+.dark-mode .cta-btn {
+  background-color: #ff4d4d;
+  color: #000;
+}
+
+/* Light theme styling */
+body.light-mode {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.light-mode .navbar, .light-mode .footer {
+  background-color: #e9ecef;
+}
+
+.light-mode .hero-section {
+  background-color: #d6d8db;
+}
+
+.light-mode .cta-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+/* Hero section */
+.hero-section {
+  padding: 100px 0;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px 0;
   text-align: center;
 }
 
-.fancy-text {
-  position: relative;
-  color: white; /* White color */
-  font-size: 4vw; /* Responsive font size */
-  font-size: 36px; /* Maximum font size */
-  z-index: 2; /* Ensure the text is on top */
-  text-align: center;
-  margin-top: 20px;
-  animation: fadeIn 2s ease-in-out, glow 1.5s infinite alternate;
-  text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000; 
+/* YouTube iframe */
+.video-embed {
+  border: none;
+  width: 100%;
+  height: 315px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+@media (min-width: 768px) {
+  .video-embed {
+    height: 360px;
   }
 }
 
-@keyframes glow {
-  from {
-    text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000;
-  }
-  to {
-    text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000;
+@media (min-width: 992px) {
+  .video-embed {
+    height: 450px;
   }
 }
 
-
-.background span {
-  width: 8vmin;
-  height: 8vmin;
-  border-radius: 8vmin;
-  backface-visibility: hidden;
-  position: absolute;
-  animation: move;
-  animation-duration: 26s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+/* Call to Action Button */
+.cta-btn {
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  .logo {
-    width: 70vw; /* Adjust the size as needed */
-  }
-
-  .coming-soon {
-    font-size: 7vw; /* Adjust the size as needed */
-  }
-
-  .fancy-text {
-    font-size: 6vw; /* Adjust the size as needed */
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    width: 80vw; /* Adjust the size as needed */
-  }
-
-  .coming-soon {
-    font-size: 8vw; /* Adjust the size as needed */
-  }
-
-  .fancy-text {
-    font-size: 7vw; /* Adjust the size as needed */
-  }
-
-}
-
-@keyframes move {
-  100% {
-    transform: translate3d(0, 0, 1px) rotate(360deg);
-  }
-}
-
-/* Existing span styles here (not shown for brevity) */
-
-
-@keyframes move {
-100% {
-    transform: translate3d(0, 0, 1px) rotate(360deg);
-}
-}
-
-/* ALL CSS BELOW IS FOR THE BACKGROUND ANIMATIONS */
-
-.background span:nth-child(0) {
-color: #bababa;
-top: 30%;
-left: 21%;
-animation-duration: 183s;
-animation-delay: -114s;
-transform-origin: -8vw 6vh;
-box-shadow: -16vmin 0 2.4282087846573477vmin currentColor;
-}
-
-.background span:nth-child(1) {
-color: #bababa;
-top: 19%;
-left: 34%;
-animation-duration: 167s;
-animation-delay: -208s;
-transform-origin: -15vw -19vh;
-box-shadow: 16vmin 0 2.8824305310387643vmin currentColor;
-}
-.background span:nth-child(2) {
-  color: #212121;
-  top: 28%;
-  left: 17%;
-  animation-duration: 194s;
-  animation-delay: -182s;
-  transform-origin: -2vw 3vh;
-  box-shadow: 16vmin 0 2.155780297146638vmin currentColor;
-}
-.background span:nth-child(3) {
-  color: #787878;
-  top: 24%;
-  left: 46%;
-  animation-duration: 91s;
-  animation-delay: -6s;
-  transform-origin: -10vw -2vh;
-  box-shadow: 16vmin 0 2.150991096040727vmin currentColor;
-}
-.background span:nth-child(4) {
-  color: #bababa;
-  top: 22%;
-  left: 63%;
-  animation-duration: 239s;
-  animation-delay: -102s;
-  transform-origin: 20vw -19vh;
-  box-shadow: 16vmin 0 2.4870186472319062vmin currentColor;
-}
-.background span:nth-child(5) {
-  color: #787878;
-  top: 69%;
-  left: 31%;
-  animation-duration: 181s;
-  animation-delay: -182s;
-  transform-origin: -9vw 21vh;
-  box-shadow: 16vmin 0 2.8552675834008463vmin currentColor;
-}
-.background span:nth-child(6) {
-  color: #212121;
-  top: 51%;
-  left: 46%;
-  animation-duration: 30s;
-  animation-delay: -73s;
-  transform-origin: -7vw -13vh;
-  box-shadow: -16vmin 0 2.9611401066793457vmin currentColor;
-}
-.background span:nth-child(7) {
-  color: #787878;
-  top: 72%;
-  left: 43%;
-  animation-duration: 64s;
-  animation-delay: -126s;
-  transform-origin: 16vw -2vh;
-  box-shadow: -16vmin 0 2.4358404665288544vmin currentColor;
-}
-.background span:nth-child(8) {
-  color: #bababa;
-  top: 85%;
-  left: 33%;
-  animation-duration: 154s;
-  animation-delay: -34s;
-  transform-origin: -19vw 24vh;
-  box-shadow: -16vmin 0 2.1719685554409764vmin currentColor;
-}
-.background span:nth-child(9) {
-  color: #bababa;
-  top: 30%;
-  left: 30%;
-  animation-duration: 135s;
-  animation-delay: -154s;
-  transform-origin: 13vw -6vh;
-  box-shadow: 16vmin 0 2.31681308874533vmin currentColor;
-}
-.background span:nth-child(10) {
-  color: #bababa;
-  top: 62%;
-  left: 36%;
-  animation-duration: 83s;
-  animation-delay: -209s;
-  transform-origin: 13vw -15vh;
-  box-shadow: 16vmin 0 2.3703069306595514vmin currentColor;
-}
-.background span:nth-child(11) {
-  color: #787878;
-  top: 50%;
-  left: 74%;
-  animation-duration: 77s;
-  animation-delay: -160s;
-  transform-origin: 15vw -19vh;
-  box-shadow: 16vmin 0 2.594406161587841vmin currentColor;
-}
-.background span:nth-child(12) {
-  color: #212121;
-  top: 44%;
-  left: 7%;
-  animation-duration: 79s;
-  animation-delay: -83s;
-  transform-origin: 2vw -21vh;
-  box-shadow: -16vmin 0 2.3694586468521175vmin currentColor;
-}
-.background span:nth-child(13) {
-  color: #787878;
-  top: 100%;
-  left: 67%;
-  animation-duration: 133s;
-  animation-delay: -64s;
-  transform-origin: 3vw -15vh;
-  box-shadow: 16vmin 0 2.3704917291237617vmin currentColor;
-}
-.background span:nth-child(14) {
-  color: #787878;
-  top: 3%;
-  left: 56%;
-  animation-duration: 99s;
-  animation-delay: -65s;
-  transform-origin: -9vw 19vh;
-  box-shadow: -16vmin 0 2.7759807451338228vmin currentColor;
-}
-.background span:nth-child(15) {
-  color: #212121;
-  top: 50%;
-  left: 28%;
-  animation-duration: 109s;
-  animation-delay: -26s;
-  transform-origin: 5vw -14vh;
-  box-shadow: -16vmin 0 2.624737648307837vmin currentColor;
-}
-.background span:nth-child(16) {
-  color: #787878;
-  top: 74%;
-  left: 12%;
-  animation-duration: 64s;
-  animation-delay: -123s;
-  transform-origin: 8vw 2vh;
-  box-shadow: -16vmin 0 2.5693356621357326vmin currentColor;
-}
-.background span:nth-child(17) {
-  color: #212121;
-  top: 57%;
-  left: 39%;
-  animation-duration: 12s;
-  animation-delay: -219s;
-  transform-origin: -17vw -13vh;
-  box-shadow: -16vmin 0 2.4015832511804653vmin currentColor;
-}
-.background span:nth-child(18) {
-  color: #212121;
-  top: 66%;
-  left: 70%;
-  animation-duration: 105s;
-  animation-delay: -217s;
-  transform-origin: 3vw 19vh;
-  box-shadow: -16vmin 0 2.3962747111857308vmin currentColor;
-}
-.background span:nth-child(19) {
-  color: #787878;
-  top: 20%;
-  left: 57%;
-  animation-duration: 144s;
-  animation-delay: -156s;
-  transform-origin: 14vw 18vh;
-  box-shadow: -16vmin 0 2.3652587239782075vmin currentColor;
-}
-.background span:nth-child(20) {
-  color: #212121;
-  top: 96%;
-  left: 98%;
-  animation-duration: 116s;
-  animation-delay: -132s;
-  transform-origin: 16vw -4vh;
-  box-shadow: -16vmin 0 2.2828998434667094vmin currentColor;
-}
-.background span:nth-child(21) {
-  color: #bababa;
-  top: 53%;
-  left: 61%;
-  animation-duration: 196s;
-  animation-delay: -145s;
-  transform-origin: 18vw -17vh;
-  box-shadow: 16vmin 0 2.4329808435568703vmin currentColor;
-}
-.background span:nth-child(22) {
-  color: #212121;
-  top: 25%;
-  left: 77%;
-  animation-duration: 140s;
-  animation-delay: -105s;
-  transform-origin: -8vw -5vh;
-  box-shadow: 16vmin 0 2.630758593998162vmin currentColor;
-}
-.background span:nth-child(23) {
-  color: #bababa;
-  top: 62%;
-  left: 40%;
-  animation-duration: 212s;
-  animation-delay: -9s;
-  transform-origin: 12vw -1vh;
-  box-shadow: -16vmin 0 2.6993898742572604vmin currentColor;
-}
-.background span:nth-child(24) {
-  color: #212121;
-  top: 8%;
-  left: 33%;
-  animation-duration: 97s;
-  animation-delay: -113s;
-  transform-origin: -3vw -2vh;
-  box-shadow: -16vmin 0 2.548722455443645vmin currentColor;
-}
-.background span:nth-child(25) {
-  color: #787878;
-  top: 47%;
-  left: 55%;
-  animation-duration: 180s;
-  animation-delay: -239s;
-  transform-origin: 7vw -7vh;
-  box-shadow: -16vmin 0 2.9230671100428633vmin currentColor;
-}
-.background span:nth-child(26) {
-  color: #212121;
-  top: 64%;
-  left: 10%;
-  animation-duration: 130s;
-  animation-delay: -51s;
-  transform-origin: -6vw 9vh;
-  box-shadow: -16vmin 0 2.5599819980948904vmin currentColor;
-}
-.background span:nth-child(27) {
-  color: #bababa;
-  top: 58%;
-  left: 19%;
-  animation-duration: 74s;
-  animation-delay: -216s;
-  transform-origin: 19vw -19vh;
-  box-shadow: -16vmin 0 2.8242077920744033vmin currentColor;
-}
-.background span:nth-child(28) {
-  color: #212121;
-  top: 61%;
-  left: 86%;
-  animation-duration: 67s;
-  animation-delay: -25s;
-  transform-origin: 18vw -20vh;
-  box-shadow: 16vmin 0 2.817599186447978vmin currentColor;
-}
-.background span:nth-child(29) {
-  color: #bababa;
-  top: 47%;
-  left: 54%;
-  animation-duration: 221s;
-  animation-delay: -92s;
-  transform-origin: -14vw -18vh;
-  box-shadow: -16vmin 0 2.471839597027346vmin currentColor;
-}
-.background span:nth-child(30) {
-  color: #212121;
-  top: 64%;
-  left: 2%;
-  animation-duration: 103s;
-  animation-delay: -89s;
-  transform-origin: -15vw -15vh;
-  box-shadow: 16vmin 0 2.414963776391058vmin currentColor;
-}
-.background span:nth-child(31) {
-  color: #bababa;
-  top: 62%;
-  left: 28%;
-  animation-duration: 195s;
-  animation-delay: -75s;
-  transform-origin: -23vw 9vh;
-  box-shadow: -16vmin 0 2.323776003599937vmin currentColor;
+.cta-btn:hover {
+  background-color: #e60000;
 }
