@@ -10,16 +10,89 @@
   filter: invert(1);
 }
 
-/* Navigation link styling */
+/* Navbar Styling */
+.navbar {
+  background-color: #e9ecef;
+}
+
+.navbar-toggler {
+  border: none;
+  margin-left: 10px; /* Add space between the CTA button and hamburger */
+}
+
 .nav-link {
   color: #000;
-  margin-right: 20px;
   text-decoration: none;
 }
 
 .nav-link:hover {
   text-decoration: underline;
 }
+
+/* Call to Action Button Styling */
+.cta-btn {
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ff4d4d;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #e60000;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 991.98px) {
+  /* Center-align the navbar links under the hamburger */
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    width: 100%; /* Full width to center-align items */
+    justify-content: center;
+  }
+
+  .nav-link {
+    display: block; /* Ensure links are stacked vertically */
+    margin: 5px 0; /* Space between each link */
+  }
+}
+
+
+.cta-btn:hover {
+  background-color: #e60000;
+}
+
+
+
+/* Theme Toggle Floating Button */
+.theme-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ff4d4d;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .theme-toggle-btn {
+  background-color: #f1c40f;
+  color: #333;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #e60000;
+}
+
 
 /* Dark theme styling */
 body.dark-mode {
@@ -107,4 +180,91 @@ body.light-mode {
 
 .cta-btn:hover {
   background-color: #e60000;
+}
+
+/* Services Section */
+/* Light Mode - Card Styling */
+.card {
+  background-color: #ffffff; /* Light background for light mode */
+  color: #212529; /* Dark text for readability */
+  border: 1px solid #ddd; /* Light border for separation */
+  height: 100%; /* Full height in the column */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Dark Mode - Card Styling */
+.dark-mode .card {
+  background-color: #333333; /* Dark background for dark mode */
+  color: #f8f9fa; /* Light text for readability */
+  border: 1px solid #444; /* Darker border for separation */
+}
+
+/* Card Image Styling */
+.card-img-top {
+  height: 250px; /* Portrait height */
+  object-fit: cover;
+}
+
+/* Ensure card body fills remaining space */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally center text */
+  text-align: center;  /* Center-align the text */
+}
+
+.card-title {
+  margin-top: 15px;
+}
+
+.card-text {
+  margin-bottom: 15px;
+}
+
+/* Services Section Background */
+.services-section {
+  background-color: #f8f9fa; /* Light background */
+}
+
+.dark-mode .services-section {
+  background-color: #343a40; /* Dark background */
+}
+
+/* Responsive video styling */
+.video-embed {
+  width: 100%;
+  height: 315px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .video-embed {
+    height: 360px;
+  }
+}
+
+@media (min-width: 992px) {
+  .video-embed {
+    height: 450px;
+  }
+}
+
+/* Hero section styling for services page */
+.hero-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
 }
