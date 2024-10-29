@@ -6,6 +6,6 @@ document.getElementById("play").addEventListener("click", function() {
     var youtubeVideo = document.getElementById("youtube-video");
     youtubeVideo.src = "https://www.youtube.com/embed/QdBZY2fkU-0?autoplay=1";  // Note the autoplay=1 in the URL
 
-    // Display the iframe
-    youtubeVideo.style.display = "block";
+    // Display the video container
+    document.getElementById("responsive-video").style.display = "block";
 });
