@@ -1,146 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Coming Soon: The Faulty Filter Company.">
-    <title>The Faulty Filter Company</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <title>The Faulty Filter Company</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="seobility" content="afd5f38eef1af6b890b3a5daae46b916">
+  <meta name="description" content="">
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="light-mode">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <!-- Logo -->
-        <a class="navbar-brand" href="#">
-          <img id="logo" src="img/logo1.png" alt="Logo" class="logo">
-        </a>
-        
-        <!-- Static Call to Action Button (always visible) -->
-        <button class="btn cta-btn ms-auto me-lg-3">Get Started</button>
-        
-        <!-- Mobile Toggle Button (Hamburger Icon) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <!-- Collapsible Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Services</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">About</a>
-            </li>
+<body>
+ 
+<!-- NAVBAR START -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgba(52, 58, 64, 0.9); box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);">
+  <div class="container-lg">
+      <a class="navbar-brand fw-bold fs-4" href="#" data-aos="fade-down">
+        <span><img src="img/logo1_bw.png" alt="Faulty Filter Logo" style="height: 55px;"></span>
+      </a>
+      
+      <!-- Links for lg screens or larger, aligned to the right -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-none d-lg-flex" data-aos="fade-down">
+              <li class="nav-item"><a class="nav-link text-white nav-link-hover" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-white nav-link-hover" href="#services">Services</a></li>
+              <li class="nav-item"><a class="nav-link text-white nav-link-hover" href="#about">About</a></li>
           </ul>
-        </div>
       </div>
-    </nav>
-
-  
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <div class="hero-text">
-              <h1>Lorem, ipsum dolor.</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis harum dignissimos consequuntur rem nobis aspernatur et quod deserunt saepe necessitatibus.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <iframe class="video-embed" src="https://www.youtube.com/embed/QdBZY2fkU-0?controls=1&modestbranding=1&rel=0" allowfullscreen></iframe>
-          </div>
-        </div>
+      
+      <!-- "Get A Quote" Button - Always visible, aligned to the right with margin for small screens -->
+      <div class="ms-auto custom-quote-button" style="white-space: nowrap;" data-aos="fade-down">
+        <a href="#contact" class="btn btn-danger" style="padding: 0.375rem 0.75rem;">Get A Quote</a>
       </div>
-    </section>
+      
 
-    <!-- Services Section -->
-    <section class="services-section py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">Our Services</h2>
-        <div class="row g-4">
-          <!-- Service Card 1 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100">
-              <img src="img/service1-thumbnail.jpg" class="card-img-top" alt="Service 1">
-              <div class="card-body">
-                <h5 class="card-title">Top 5 Video</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum accusamus voluptatem consequatur repellendus earum distinctio dicta ratione blanditiis ipsam sequi.</p>
-                <a href="services.html">
-                  <button class="btn cta-btn mt-auto">See more</button>
-                </a>                
+      <!-- Dropdown for smaller screens -->
+      <div class="dropdown d-lg-none">
+          <button class="btn btn-danger px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-aos="fade-down" data-aos-duration="1000">
+              <i class="fas fa-bars" style="color: #ffffff;"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#home">Home</a></li>
+              <li><a class="dropdown-item" href="#services">Services</a></li>
+              <li><a class="dropdown-item" href="#about">About</a></li>
+          </ul>
+      </div>
+  </div>
+</nav>
+<!-- NAVBAR END -->
+
+
+
+
+<!-- HERO SECTION START-->
+<section class="home py-1 section-header" id="home">
+  <div class="container-lg">
+      <div class="row min-vh-100 align-items-center align-content-center">
+          <div class="col-md-6 mt-5 mt-md-0 order-md-first" data-aos="fade-right">
+              <div class="home-text">
+                  <p class="text-white mb-1">Lorem ipsum dolor sit amet.</p>
+                  <h1 class="text-danger text-uppercase fs-1 fw-bold">Main Header</h1>
+                  <h2 class="fs-4 text-white">The Faulty Filter Company</h2>
+                  <p class="mt-4 text-white"><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quis deserunt fuga amet esse iusto quo ea, eveniet architecto, eos natus beatae omnis nam provident obcaecati sed perferendis dolore dignissimos!</strong></p>
               </div>
+          </div>
+          <div class="col-md-6 order-last order-md-0">
+            <div id="video-container">
+              <!-- Play Button SVG -->
+              <svg id="play" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+                  <g fill="none">
+                      <g transform="translate(2.000000, 2.000000)" stroke-width="4">
+                          <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#DC3545"></path>
+                          <path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#DC3545"></path>
+                          <path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#DC3545"></path>
+                      </g>
+                  </g>
+              </svg>
+          
+              <!-- YouTube Video iFrame, initially hidden -->
+              <iframe id="youtube-video" width="560" height="315" src="" title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
             </div>
           </div>
-          <!-- Service Card 2 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100">
-              <img src="img/service2-thumbnail.jpg" class="card-img-top" alt="Service 2">
-              <div class="card-body">
-                <h5 class="card-title">Vestimonials</h5>
-                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil voluptas atque ad fuga labore enim maiores hic dolores sequi suscipit.</p>
-                <a href="services.html">
-                  <button class="btn cta-btn mt-auto">See more</button>
-                </a>
-              </div>
-            </div>
+      </div>
+  </div>
+</section>
+<!-- HERO SECTION END -->
+
+
+
+
+
+<!-- FOOTER SECTION START -->
+<footer class="footer bg-dark text-center py-4">
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <a href="#" target="_blank" class="text-danger me-2"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" target="_blank" class="text-danger me-2"><i class="fab fa-instagram"></i></a>
+              <a href="#" target="_blank" class="text-danger me-2"><i class="fab fa-tiktok"></i></a>
+              <a href="#" target="_blank" class="text-danger me-2"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" target="_blank" class="text-danger me-2"><i class="fab fa-youtube"></i></a>
+              <a href="#" target="_blank" class="text-danger"><i class="fab fa-twitter"></i></a>
           </div>
-          <!-- Service Card 3 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100">
-              <img src="img/service3-thumbnail.jpg" class="card-img-top" alt="Service 3">
-              <div class="card-body">
-                <h5 class="card-title">Training Videos</h5>
-                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi obcaecati saepe quam veritatis laboriosam maxime minima esse est veniam fugit.</p>
-                <a href="services.html">
-                  <button class="btn cta-btn mt-auto">See more</button>
-                </a>                
-              </div>
-            </div>
+      </div>
+      <div class="row mt-3">
+          <div class="col">
+              <p class="text-white">&copy; 2024 The Faulty Filter Company</p>
           </div>
-        </div>
       </div>
-    </section>
+  </div>
+</footer>
 
-    <!-- About Section -->
-    <section class="about-section py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">About The Faulty Filter Company</h2>
-        <p class="text-center mx-auto about-text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus commodi eius minus esse, cumque non inventore at libero soluta deserunt excepturi ipsam. Consequatur, voluptatibus neque! Ab, perferendis, neque nostrum necessitatibus at voluptate aspernatur fuga amet autem, odio alias atque dolore accusamus quasi officiis suscipit vel labore sunt pariatur quo dignissimos.
-        </p>
-      </div>
-    </section>
+<!-- FOOTER SECTION END -->
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2024 Your Company. All Rights Reserved.</p>
-      </div>
-    </footer>
-    <script>
-      const themeToggle = document.getElementById('themeToggle');
-      const body = document.body;
-  
-      themeToggle.addEventListener('click', function () {
-        if (body.classList.contains('light-mode')) {
-          body.classList.replace('light-mode', 'dark-mode');
-          themeToggle.textContent = 'Switch to Light Mode';
-        } else {
-          body.classList.replace('dark-mode', 'light-mode');
-          themeToggle.textContent = 'Switch to Dark Mode';
-        }
-      });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="js/playButton.js"></script>
 </body>
 </html>

@@ -1,270 +1,180 @@
- /* Logo size */
- .logo {
-  width: 150px;
-  height: auto;
-  transition: filter 0.5s ease;
+/* DEFAULTS */
+html,
+body {
+  background-color: #000; /* Set background color to black */
+  width: 100%; /* Ensure full width */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-family: "Bai Jamjuree", sans-serif;
 }
 
-/* In dark mode, invert the logo's colors */
-.dark-mode .logo {
-  filter: invert(1);
+/* Change color to white on hover for all hyperlinks */
+a:hover {
+  color: #ffffff; /* Changes color to white on hover */
 }
 
-/* Navbar Styling */
-.navbar {
-  background-color: #e9ecef;
+/* NAVIGATION */
+
+.nav-link-hover:hover {
+  color: #DC3545 !important; /* Use the warning color */
 }
 
-.navbar-toggler {
-  border: none;
-  margin-left: 10px; /* Add space between the CTA button and hamburger */
+/* Dropdown menu styling to match the navbar */
+.navbar .dropdown-menu {
+  background-color: #343a40; /* Same as navbar background */
+  /* If you have a specific font family in use for the navbar, apply it here as well */
 }
 
-.nav-link {
-  color: #000;
-  text-decoration: none;
+/* Dropdown item styling for text color and hover effects */
+.navbar .dropdown-menu .dropdown-item {
+  color: #ffffff; /* White text for dropdown items */
+  font-weight: normal; /* Match the font weight as per your preference, adjust if needed */
 }
 
-.nav-link:hover {
-  text-decoration: underline;
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #DC3545; /* Optional: Change background color on hover to match the "warning" theme */
+  color: #343a40; /* Change text color on hover for better contrast, if needed */
 }
 
-/* Call to Action Button Styling */
-.cta-btn {
-  border-radius: 30px;
-  padding: 10px 20px;
-  font-size: 18px;
-  background-color: #ff4d4d;
-  color: #fff;
-  transition: background-color 0.3s ease;
+.navbar-brand > span {
+  display: block; /* Continue treating each span as a block-level element */
+  margin: 0; /* Reset default margins */
+  padding: 0; /* Reset default paddings */
 }
 
-.cta-btn:hover {
-  background-color: #e60000;
+/* Adjust the bottom margin of the first span */
+.navbar-brand > span:first-child {
+  letter-spacing: 1.4px;
+  margin-bottom: -5px; /* Pulls the "Technology" text closer to "8-Bit Hive" */
 }
 
-/* Responsive adjustments for mobile */
-@media (max-width: 991.98px) {
-  /* Center-align the navbar links under the hamburger */
-  .navbar-collapse {
-    text-align: center;
-  }
-
-  .navbar-nav {
-    width: 100%; /* Full width to center-align items */
-    justify-content: center;
-  }
-
-  .nav-link {
-    display: block; /* Ensure links are stacked vertically */
-    margin: 5px 0; /* Space between each link */
-  }
+/* Optional: Adjust the top margin of the second span if needed */
+.navbar-brand > span:nth-child(2) {
+  margin-top: -5px; /* Further adjustment if needed */
+  letter-spacing: 1.4px; /* Keep your previous adjustments */
+  font-size: 0.9em; /* Keep your previous adjustments */
 }
 
-
-.cta-btn:hover {
-  background-color: #e60000;
+/* Ensure headers are not hidden behind the navbar */
+.section-header {
+  padding-top: 100px; /* Adjust based on the height of your navbar */
+  margin-top: -100px; /* Adjust based on the height of your navbar */
 }
 
+/* HERO */
+.home {
+  position: relative;
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8); /* Dark grey overlay */
+  z-index: 1;
+}
 
-/* Theme Toggle Floating Button */
-.theme-toggle-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #ff4d4d;
-  border: none;
-  border-radius: 50%;
-  padding: 10px;
-  color: #fff;
-  font-size: 1.5rem;
+/* Ensure content is above the overlay */
+.home > .container-lg {
+  position: relative;
+  z-index: 2;
+}
+
+svg#play {
+  width:200px;
+ margin: 120px auto;
+ display:block;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
+  transform-origin: 50% 50%;
 }
 
-.dark-mode .theme-toggle-btn {
-  background-color: #f1c40f;
-  color: #333;
+svg#play #triangle {
+  fill:rgba(22,22,22,0);
+  transition:500ms;
+  transform-origin: 50% 50%;
+}
+svg#play:hover #triangle {
+  fill:#DC3545;
+  transform-origin: 50% 50%;
 }
 
-.theme-toggle-btn:hover {
-  background-color: #e60000;
+ svg #lineOne, svg #lineTwo {
+  transform-origin: 50% 50%;
+  transition: 1s;
+} 
+
+ svg:hover #lineOne {
+  transform: rotate(260deg);
+   -webkit-transform: rotate(260deg);
+-moz-transform: rotate(260deg);
+-o-transform: rotate(260deg);
+   transform-origin: 50% 50%;
+} 
+
+ svg:hover #lineTwo {
+  transform: rotate(-450deg);
+   transform-origin: 50% 50%;
+} 
+
+/* Optionally, if you want to ensure the image covers older browsers that don't support background-attachment: fixed */
+@supports not (background-attachment: fixed) {
+  .home {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-text {
+    margin-top: 12rem; /* Adjust the value as needed */
+  }
 }
 
 
-/* Dark theme styling */
-body.dark-mode {
-  background-color: #000;
-  color: #f8f9fa;
-}
-
-.dark-mode .navbar, .dark-mode .footer {
-  background-color: #343a40;
-}
-
-.dark-mode .hero-section {
-  background-color: #111;
-}
-
-.dark-mode .nav-link {
-  color: #f8f9fa;
-}
-
-.dark-mode .cta-btn {
-  background-color: #ff4d4d;
-  color: #000;
-}
-
-/* Light theme styling */
-body.light-mode {
-  background-color: #f8f9fa;
-  color: #212529;
-}
-
-.light-mode .navbar, .light-mode .footer {
-  background-color: #e9ecef;
-}
-
-.light-mode .hero-section {
-  background-color: #d6d8db;
-}
-
-.light-mode .cta-btn {
-  background-color: #ff4d4d;
-  color: #fff;
-}
-
-/* Hero section */
-.hero-section {
-  padding: 100px 0;
-}
-
-.hero-text {
-  max-width: 500px;
-}
-
-/* Footer */
+/* FOOTER */
 .footer {
-  padding: 20px 0;
+  background-color: #343a40; /* Dark footer background */
+  color: #ffc107; /* Bootstrap warning color for text */
+}
+
+.footer a.text-warning {
+  color: #ffc107; /* Ensures icons use the Bootstrap warning color */
+  font-size: 1.25rem; /* Increase icon size */
+}
+
+.footer a.text-warning:hover {
+  color: white; /* Slightly darker shade for hover effect */
+}
+
+.footer p {
+  color: #ffffff; /* White color for text */
+}
+
+/* 404 */
+
+.error-container {
   text-align: center;
+  padding: 40px;
 }
-
-/* YouTube iframe */
-.video-embed {
-  border: none;
-  width: 100%;
-  height: 315px;
+.error-code {
+  color: #DC3545;
+  font-size: 5em;
 }
-
-@media (min-width: 768px) {
-  .video-embed {
-    height: 360px;
-  }
+.error-message {
+  color: #f8f9fa;
+  font-size: 2em;
 }
-
-@media (min-width: 992px) {
-  .video-embed {
-    height: 450px;
-  }
+.error-detail {
+  color: #ced4da;
+  font-size: 1.2em;
 }
-
-/* Call to Action Button */
-.cta-btn {
-  border-radius: 30px;
-  padding: 10px 20px;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-btn:hover {
-  background-color: #e60000;
-}
-
-/* Services Section */
-/* Light Mode - Card Styling */
-.card {
-  background-color: #ffffff; /* Light background for light mode */
-  color: #212529; /* Dark text for readability */
-  border: 1px solid #ddd; /* Light border for separation */
-  height: 100%; /* Full height in the column */
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* Dark Mode - Card Styling */
-.dark-mode .card {
-  background-color: #333333; /* Dark background for dark mode */
-  color: #f8f9fa; /* Light text for readability */
-  border: 1px solid #444; /* Darker border for separation */
-}
-
-/* Card Image Styling */
-.card-img-top {
-  height: 250px; /* Portrait height */
-  object-fit: cover;
-}
-
-/* Ensure card body fills remaining space */
-.card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Horizontally center text */
-  text-align: center;  /* Center-align the text */
-}
-
-.card-title {
-  margin-top: 15px;
-}
-
-.card-text {
-  margin-bottom: 15px;
-}
-
-/* Services Section Background */
-.services-section {
-  background-color: #f8f9fa; /* Light background */
-}
-
-.dark-mode .services-section {
-  background-color: #343a40; /* Dark background */
-}
-
-/* Responsive video styling */
-.video-embed {
-  width: 100%;
-  height: 315px;
-  border: none;
-}
-
-@media (min-width: 768px) {
-  .video-embed {
-    height: 360px;
-  }
-}
-
-@media (min-width: 992px) {
-  .video-embed {
-    height: 450px;
-  }
-}
-
-/* Hero section styling for services page */
-.hero-section {
-  background-color: #f8f9fa;
-  padding: 80px 0;
-}
-
-.hero-section h1 {
-  font-size: 2.5rem;
-}
-
-.hero-section p {
-  font-size: 1.2rem;
+a {
+  color: #ffc107;
 }
