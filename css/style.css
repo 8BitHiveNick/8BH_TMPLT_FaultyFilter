@@ -167,6 +167,86 @@ svg#play:hover #triangle {
   height: 100%;
 }
 
+/* PORTFOLIO SECTION BACKGROUND */
+.portfolio {
+  position: relative; /* Ensures all content stays within this section */
+  background-image: url("../img/services_bg.png"); /* Re-enable background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Parallax effect */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Center all content in the section */
+.portfolio .container-lg,
+.portfolio h2,
+.portfolio .card-body {
+  text-align: center;
+}
+
+/* Style for the Portfolio Heading */
+.portfolio h2 {
+  color: #DC3545; /* Bootstrap "danger" color for the heading */
+  font-weight: bold;
+  margin-bottom: 30px;
+  position: relative; /* Keep it positioned within the portfolio section */
+}
+
+/* Card Appearance */
+.portfolio .card {
+  background-color: rgba(52, 58, 64, 0.8); /* Semi-transparent dark background */
+  color: #fff;
+  overflow: hidden;
+  padding: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for cards */
+.portfolio .card:hover {
+  transform: scale(1.01);
+  background-image: linear-gradient(to right, black, #503033, grey);
+}
+
+/* Image Styling and Hover Effect */
+.portfolio .card .card-img-top {
+  width: calc(100% - 10px);
+  height: auto;
+  margin: 5px;
+  object-fit: cover;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.portfolio .card:hover .card-img-top {
+  filter: grayscale(0%);
+}
+
+/* Center button in card */
+.portfolio .card .btn-warning {
+  color: #343a40;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.portfolio .card .btn-warning:hover {
+  background-color: #DC3545;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.portfolio .card-body {
+  padding: 15px;
+}
+
+/* Make card title bold */
+.portfolio .card-title {
+  font-weight: bold;
+}
 
 
 /* FOOTER */
@@ -208,4 +288,8 @@ svg#play:hover #triangle {
 }
 a {
   color: #ffc107;
+}
+
+.section-offset {
+  margin-top: 70px; /* Adjust based on the navbar height */
 }
