@@ -355,6 +355,124 @@ svg#play:hover #triangle {
   transform: translateY(-3px);
 }
 
+/* ABOUT SECTION FOR INDEX PAGE */
+#about-section-index {
+  background-color: #343a40;
+  padding: 60px 0;
+}
+
+#about-section-index h2 {
+  color: #DC3545;
+  font-weight: bold;
+}
+
+#about-section-index p {
+  color: #ffffff;
+  font-size: 1.1em;
+}
+
+/* ABOUT SECTION FOR ABOUT PAGE */
+#about-section-page {
+  background-image: url('../img/about-bg.jpg'); /* Add any background image if desired */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  color: #ffffff;
+}
+
+#about-section-page h2 {
+  color: #DC3545;
+  font-weight: bold;
+}
+
+#about-section-page p {
+  color: #ffffff;
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ABOUT HERO SECTION STYLING */
+.about-hero-section {
+  position: relative;
+  background-image: url("../img/about-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+  padding: 60px 0;
+  z-index: 0; /* Ensure base layer is beneath content */
+}
+
+.about-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  z-index: 1; /* Keeps overlay below the text and video */
+}
+
+.about-hero-section .about-text {
+  position: relative;
+  z-index: 2; /* Ensure text appears above overlay */
+}
+
+#about-video-container {
+  position: relative;
+  z-index: 2; /* Ensure video container appears above overlay */
+}
+
+/* Play Button SVG Styling */
+#about-play {
+  width: 200px;
+  margin: 120px auto;
+  display: block;
+  cursor: pointer;
+  transform-origin: 50% 50%;
+}
+
+#about-play #triangle {
+  fill: rgba(22,22,22,0);
+  transition: 500ms;
+}
+
+#about-play:hover #triangle {
+  fill: #DC3545;
+}
+
+#about-play #lineOne, #about-play #lineTwo {
+  transition: 1s;
+}
+
+#about-play:hover #lineOne {
+  transform: rotate(260deg);
+}
+
+#about-play:hover #lineTwo {
+  transform: rotate(-450deg);
+}
+
+/* Responsive video container */
+#about-responsive-video {
+  display: none; /* Hidden by default */
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+#about-responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 
 /* FOOTER */
