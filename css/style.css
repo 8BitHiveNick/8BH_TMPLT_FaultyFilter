@@ -341,35 +341,60 @@ svg#play:hover #triangle {
   border-radius: 5px;
 }
 
-.services-section .btn.cta-btn {
-  background-color: #DC3545;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+
+
+.card-title {
+  position: relative;
+  z-index: 2; /* Ensure above overlays */
+  color: #DC3545; /* Keep text visible and branded */
+  font-weight: bold; /* Make it stand out */
 }
 
-.services-section .btn.cta-btn:hover {
-  background-color: #ffffff;
-  color: #DC3545;
-  transform: translateY(-3px);
-}
 
 /* ABOUT SECTION FOR INDEX PAGE */
+/* ABOUT SECTION WITH BACKGROUND IMAGE */
 #about-section-index {
-  background-color: #343a40;
-  padding: 60px 0;
+  position: relative; /* Ensures the overlay stays within the section */
+  background-image: url('../img/whatwedo.png'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Creates a subtle parallax effect */
+  padding: 60px 0; /* Adjust the padding as needed */
+  color: #ffffff; /* Ensures text is readable over the image */
+  overflow: hidden; /* Prevents any child content from overflowing */
+}
+
+/* Optional Overlay */
+#about-section-index::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay to enhance text readability */
+  z-index: 1; /* Ensures the overlay stays behind the text */
+}
+
+/* Ensure content appears above the overlay */
+#about-section-index .container {
+  position: relative;
+  z-index: 2; /* Keeps the content on top of the overlay */
+  text-align: center; /* Centers all text */
 }
 
 #about-section-index h2 {
-  color: #DC3545;
+  color: #DC3545; /* Bootstrap "danger" color for the heading */
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 #about-section-index p {
   color: #ffffff;
   font-size: 1.1em;
+  line-height: 1.5;
 }
+
 
 /* ABOUT SECTION FOR ABOUT PAGE */
 #about-section-page {
@@ -475,45 +500,150 @@ svg#play:hover #triangle {
 }
 
 
-/* FOOTER */
+/* FOOTER WITH BACKGROUND IMAGE */
 .footer {
-  background-color: #343a40; /* Dark footer background */
-  color: #ffc107; /* Bootstrap warning color for text */
+  position: relative;
+  background-image: url('../img/footer.png'); /* Replace with your footer background image */
+  background-size: cover; /* Ensure the image covers the entire footer */
+  background-position: center bottom; /* Align the background image to the bottom */
+  background-attachment: fixed; /* Add a parallax effect if desired */
+  padding: 60px 0;
+  color: #ffffff;
+  overflow: hidden;
 }
 
-.footer a.text-warning {
-  color: #ffc107; /* Ensures icons use the Bootstrap warning color */
-  font-size: 1.25rem; /* Increase icon size */
+/* Overlay for Footer */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black overlay */
+  z-index: 1;
 }
 
-.footer a.text-warning:hover {
-  color: white; /* Slightly darker shade for hover effect */
+/* Footer Content */
+.footer .container {
+  position: relative;
+  z-index: 2; /* Ensure content appears above overlay */
+  text-align: center; /* Center text and other content */
 }
 
-.footer p {
-  color: #ffffff; /* White color for text */
+/* Footer Links */
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
-/* 404 */
+.footer a:hover {
+  color: #DC3545; /* Change to "danger" red on hover */
+}
 
+/* Footer Quick Links */
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  font-size: 1rem;
+}
+
+/* Footer Social Links */
+.footer .social-links a {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: #ffffff;
+  transform: scale(1.2); /* Slightly enlarge icons on hover */
+}
+
+
+
+/* Adjusting 404 Header Section */
 .error-container {
   text-align: center;
-  padding: 40px;
+  padding: 120px 20px 40px; /* Top padding ensures space below the navbar */
+  background-image: url('../img/404.png'); /* Replace with your desired background image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional parallax effect */
+  color: #ffffff; /* Ensures readability over the background */
+  position: relative;
+  overflow: hidden;
 }
+
+/* Overlay for Header Background */
+.error-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay to enhance text visibility */
+  z-index: 1;
+}
+
+/* Ensure Text Stays Above the Overlay */
+.error-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Styling for 404 Text */
 .error-code {
-  color: #DC3545;
-  font-size: 5em;
+  color: #DC3545; /* Bootstrap "danger" red for standout text */
+  font-size: 5rem; /* Adjust size as needed */
+  margin-bottom: 20px;
 }
+
 .error-message {
-  color: #f8f9fa;
-  font-size: 2em;
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
+
 .error-detail {
-  color: #ced4da;
-  font-size: 1.2em;
+  color: #ced4da; /* Subtle contrast color */
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
 }
-a {
-  color: #ffc107;
+
+.error-detail a {
+  color: #DC3545; /* Highlight button/link with red color */
+  text-decoration: none;
+}
+
+.error-detail a:hover {
+  color: #ffffff; /* On hover, text changes to white */
+}
+
+/* Button Styling */
+.error-detail .btn {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  background-color: #DC3545;
+  color: #ffffff;
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.error-detail .btn:hover {
+  background-color: #ffffff;
+  color: #DC3545;
+  transform: scale(1.05);
 }
 
 .section-offset {
@@ -546,4 +676,49 @@ a {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+.cta-btn {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: #DC3545;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Default Button Styling */
+.cta-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #DC3545; /* Solid red color */
+  border: 2px solid #DC3545;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover State */
+.cta-btn:hover {
+  background-color: transparent; /* Makes the button background transparent */
+  color: #DC3545; /* Changes text to match the border */
+  transform: scale(1.03); /* Slight scaling effect */
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.5); /* Subtle red glow */
+  border-color: #DC3545; /* Keeps the border red */
+}
+
+/* Button Active/Pressed State */
+.cta-btn:active {
+  transform: scale(0.98); /* Shrinks slightly to mimic a press */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Minimizes shadow on press */
 }
