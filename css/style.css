@@ -722,3 +722,12 @@ svg#play:hover #triangle {
   transform: scale(0.98); /* Shrinks slightly to mimic a press */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Minimizes shadow on press */
 }
+
+/* Video Embed Styling */
+.video-embed {
+  width: 100%; /* Makes the video responsive */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional: Rounds corners for a polished look */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  object-fit: cover; /* Ensures the video fills the container */
+}
