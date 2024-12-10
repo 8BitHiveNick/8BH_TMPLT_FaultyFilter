@@ -206,7 +206,6 @@ svg#play:hover #triangle {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   display: flex; /* Flexbox layout for uniform height */
   flex-direction: column; /* Stack content vertically */
-  justify-content: space-between; /* Space out content evenly */
   height: 100%; /* Ensures cards stretch uniformly */
 }
 
@@ -226,19 +225,32 @@ svg#play:hover #triangle {
   filter: grayscale(100%);
 }
 
+/* Button Styling */
+.portfolio .card .btn {
+  margin-top: auto; /* Pushes the button to the bottom */
+  align-self: center; /* Ensures the button stays centered */
+  width: auto; /* Prevents the button from stretching across the card */
+  padding: 10px 20px; /* Adjust padding for a consistent size */
+}
+
+
 .portfolio .card:hover .card-img-top {
   filter: grayscale(0%);
 }
 
 /* Ensure card-body content takes up available space */
 .portfolio .card-body {
-  flex-grow: 1; /* Pushes the button to the bottom */
+  flex-grow: 1; /* Pushes the card content to fill available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Ensure button stays at the bottom consistently */
+/* Button always stays near the bottom */
 .portfolio .card .btn {
-  margin-top: auto; /* Adds consistent spacing from content */
+  margin-top: auto; /* Ensures the button aligns to the bottom */
 }
+
 
 
 /* Center button in card */
