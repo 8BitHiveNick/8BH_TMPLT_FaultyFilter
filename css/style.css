@@ -137,6 +137,8 @@ svg#play:hover #triangle {
   }
 }
 
+
+
 /* Ensure the video container is hidden on load */
 #responsive-video {
   display: none;
@@ -202,6 +204,10 @@ svg#play:hover #triangle {
   transition: transform 0.3s ease, background-color 0.3s ease;
   border: none;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex; /* Flexbox layout for uniform height */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Space out content evenly */
+  height: 100%; /* Ensures cards stretch uniformly */
 }
 
 /* Hover effect for cards */
@@ -223,6 +229,17 @@ svg#play:hover #triangle {
 .portfolio .card:hover .card-img-top {
   filter: grayscale(0%);
 }
+
+/* Ensure card-body content takes up available space */
+.portfolio .card-body {
+  flex-grow: 1; /* Pushes the button to the bottom */
+}
+
+/* Ensure button stays at the bottom consistently */
+.portfolio .card .btn {
+  margin-top: auto; /* Adds consistent spacing from content */
+}
+
 
 /* Center button in card */
 .portfolio .card .btn-warning {
