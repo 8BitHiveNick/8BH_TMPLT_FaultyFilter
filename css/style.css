@@ -424,6 +424,84 @@ svg#play:hover #triangle {
   line-height: 1.5;
 }
 
+/* Consistent Card Title and Text Font Sizes */
+.card-title {
+  font-size: 1.25rem; /* Match the size for consistency */
+  font-weight: bold; /* Ensures bold headings */
+  color: #DC3545; /* Consistent red color */
+}
+
+.card-text {
+  font-size: 1rem; /* Matches text size across sections */
+  line-height: 1.5; /* Improved readability */
+  color: #FFFFFF; /* Ensures consistent text color */
+}
+
+/* CTA Button Consistency */
+.cta-btn {
+  display: inline-block;
+  padding: 10px 20px; /* Consistent button padding */
+  font-size: 1rem; /* Button font size */
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #DC3545; /* Red theme color */
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: #ffffff;
+  color: #DC3545;
+  transform: scale(1.05); /* Subtle hover effect */
+}
+
+/* Card Container Consistency */
+.card {
+  background-color: #1E1E1E; /* Consistent dark background */
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03); /* Subtle hover scale */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Title Consistency */
+.section-title {
+  font-size: 2rem; /* Matches the About section title */
+  font-weight: bold;
+  color: #DC3545; /* Red theme color */
+  margin-bottom: 1.5rem;
+}
+
+/* Section Paragraph Consistency */
+.section-paragraph {
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1.1rem; /* Slightly smaller for smaller screens */
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .cta-btn {
+    font-size: 0.9rem; /* Adjust button size */
+    padding: 8px 16px;
+  }
+}
+
 
 /* ABOUT SECTION FOR ABOUT PAGE */
 #about-section-page {
@@ -446,6 +524,50 @@ svg#play:hover #triangle {
   max-width: 700px;
   margin: 0 auto;
 }
+
+/* Center arrows between cards */
+.fa-arrow-right,
+.fa-arrow-down {
+  margin: 0 auto; /* Centers the arrows */
+  opacity: 0.8;
+}
+
+.fa-3x {
+  font-size: 2.5rem; /* Adjust arrow and icon sizes */
+}
+
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03); /* Adds subtle hover effect */
+}
+
+/* Add spacing for mobile arrows */
+.d-lg-none .fa-arrow-down {
+  margin: 10px 0;
+}
+
+/* Center the arrows between cards */
+.arrow-spacing {
+  margin: 20px auto; /* Adds vertical spacing */
+  display: block; /* Ensures arrows take up full width */
+  text-align: center; /* Centers the arrows horizontally */
+}
+
+/* Adjust spacing between stacked cards for mobile */
+@media (max-width: 992px) {
+  .col-md-6,
+  .col-lg-3 {
+    margin-bottom: 0; /* Prevent extra margins */
+  }
+
+  .arrow-spacing {
+    margin: 10px auto; /* Reduce spacing for smaller screens */
+  }
+}
+
 
 /* ABOUT HERO SECTION STYLING */
 .about-hero-section {
