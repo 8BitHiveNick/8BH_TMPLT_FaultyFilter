@@ -298,6 +298,7 @@ svg:hover #lineTwo {
 }
 
 
+
 /* HEADER SECTION */
 .header-section {
   background-image: url("../img/hero.jpg"); /* Replace with your image path */
@@ -400,6 +401,40 @@ svg:hover #lineTwo {
   font-weight: bold; /* Make it stand out */
 }
 
+/* Default card appearance */
+.portfolio .card {
+  background-color: rgba(52, 58, 64, 0.8); /* Semi-transparent dark background */
+  color: #fff;
+  overflow: hidden;
+  padding: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow by default */
+}
+
+/* Red shadow on hover */
+.portfolio .card:hover {
+  transform: scale(1.03); /* Slightly enlarge the card on hover */
+  box-shadow: 0 0 20px 10px rgba(220, 53, 69, 0.6); /* Centered and larger red shadow */
+  background-image: none; /* Remove gradient */
+}
+
+/* Image styling remains consistent */
+.portfolio .card .card-img-top {
+  width: calc(100% - 10px);
+  height: auto;
+  margin: 5px;
+  object-fit: cover;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%);
+}
+
+/* Remove gradient hover effect on images */
+.portfolio .card:hover .card-img-top {
+  filter: grayscale(0%);
+}
+
+
 /* ABOUT SECTION FOR INDEX PAGE */
 /* ABOUT SECTION WITH BACKGROUND IMAGE */
 #about-section-index {
@@ -456,6 +491,19 @@ svg:hover #lineTwo {
   line-height: 1.5; /* Improved readability */
   color: #ffffff; /* Ensures consistent text color */
 }
+
+/* Default card appearance */
+#about-section-index .row .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow by default */
+}
+
+/* Centered and slightly larger red shadow on hover */
+#about-section-index .row .card:hover {
+  transform: scale(1.03); /* Slightly enlarge the card on hover */
+  box-shadow: 0 0 20px 10px rgba(220, 53, 69, 0.6); /* Centered and larger red shadow */
+}
+
 
 /* CTA Button Consistency */
 .cta-btn {
