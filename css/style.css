@@ -17,7 +17,7 @@ a:hover {
 /* NAVIGATION */
 
 .nav-link-hover:hover {
-  color: #DC3545 !important; /* Use the warning color */
+  color: #dc3545 !important; /* Use the warning color */
 }
 
 /* Dropdown menu styling to match the navbar */
@@ -33,7 +33,7 @@ a:hover {
 }
 
 .navbar .dropdown-menu .dropdown-item:hover {
-  background-color: #DC3545; /* Optional: Change background color on hover to match the "warning" theme */
+  background-color: #dc3545; /* Optional: Change background color on hover to match the "warning" theme */
   color: #343a40; /* Change text color on hover for better contrast, if needed */
 }
 
@@ -89,40 +89,41 @@ a:hover {
 }
 
 svg#play {
-  width:200px;
- margin: 120px auto;
- display:block;
+  width: 200px;
+  margin: 120px auto;
+  display: block;
   cursor: pointer;
   transform-origin: 50% 50%;
 }
 
 svg#play #triangle {
-  fill:rgba(22,22,22,0);
-  transition:500ms;
+  fill: rgba(22, 22, 22, 0);
+  transition: 500ms;
   transform-origin: 50% 50%;
 }
 svg#play:hover #triangle {
-  fill:#DC3545;
+  fill: #dc3545;
   transform-origin: 50% 50%;
 }
 
- svg #lineOne, svg #lineTwo {
+svg #lineOne,
+svg #lineTwo {
   transform-origin: 50% 50%;
   transition: 1s;
-} 
+}
 
- svg:hover #lineOne {
+svg:hover #lineOne {
   transform: rotate(260deg);
-   -webkit-transform: rotate(260deg);
--moz-transform: rotate(260deg);
--o-transform: rotate(260deg);
-   transform-origin: 50% 50%;
-} 
+  -webkit-transform: rotate(260deg);
+  -moz-transform: rotate(260deg);
+  -o-transform: rotate(260deg);
+  transform-origin: 50% 50%;
+}
 
- svg:hover #lineTwo {
+svg:hover #lineTwo {
   transform: rotate(-450deg);
-   transform-origin: 50% 50%;
-} 
+  transform-origin: 50% 50%;
+}
 
 /* Optionally, if you want to ensure the image covers older browsers that don't support background-attachment: fixed */
 @supports not (background-attachment: fixed) {
@@ -136,8 +137,6 @@ svg#play:hover #triangle {
     margin-top: 12rem; /* Adjust the value as needed */
   }
 }
-
-
 
 /* Ensure the video container is hidden on load */
 #responsive-video {
@@ -158,7 +157,6 @@ svg#play:hover #triangle {
   width: 100%;
   height: 100%;
 }
-
 
 /* Style the iframe to cover the container */
 .responsive-video iframe {
@@ -189,7 +187,7 @@ svg#play:hover #triangle {
 
 /* Style for the Portfolio Heading */
 .portfolio h2 {
-  color: #DC3545; /* Bootstrap "danger" color for the heading */
+  color: #dc3545; /* Bootstrap "danger" color for the heading */
   font-weight: bold;
   margin-bottom: 30px;
   position: relative; /* Keep it positioned within the portfolio section */
@@ -197,7 +195,12 @@ svg#play:hover #triangle {
 
 /* Card Appearance */
 .portfolio .card {
-  background-color: rgba(52, 58, 64, 0.8); /* Semi-transparent dark background */
+  background-color: rgba(
+    52,
+    58,
+    64,
+    0.8
+  ); /* Semi-transparent dark background */
   color: #fff;
   overflow: hidden;
   padding: 5px;
@@ -233,7 +236,6 @@ svg#play:hover #triangle {
   padding: 10px 20px; /* Adjust padding for a consistent size */
 }
 
-
 .portfolio .card:hover .card-img-top {
   filter: grayscale(0%);
 }
@@ -251,8 +253,6 @@ svg#play:hover #triangle {
   margin-top: auto; /* Ensures the button aligns to the bottom */
 }
 
-
-
 /* Center button in card */
 .portfolio .card .btn-warning {
   color: #343a40;
@@ -263,7 +263,7 @@ svg#play:hover #triangle {
 }
 
 .portfolio .card .btn-warning:hover {
-  background-color: #DC3545;
+  background-color: #dc3545;
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -277,10 +277,30 @@ svg#play:hover #triangle {
   font-weight: bold;
 }
 
+/* Styling for right arrows (desktop) */
+.d-lg-block .fa-arrow-right {
+  display: block;
+  margin: 0 auto; /* Center the arrow between cards */
+}
+
+/* Styling for down arrows (mobile/tablet) */
+.d-lg-none .fa-arrow-down {
+  display: block;
+  margin: 10px auto; /* Add spacing for better visibility */
+}
+
+/* Optional: Adjust arrow size or spacing if needed */
+.fa-arrow-right,
+.fa-arrow-down {
+  color: #dc3545; /* Keep the red color consistent */
+  font-size: 2.5rem; /* Adjust arrow size */
+  opacity: 0.8; /* Slightly transparent for subtle effect */
+}
+
 
 /* HEADER SECTION */
 .header-section {
-  background-image: url('../img/hero.jpg'); /* Replace with your image path */
+  background-image: url("../img/hero.jpg"); /* Replace with your image path */
   background-size: cover; /* Cover the entire section */
   background-position: center; /* Center the image */
   background-attachment: fixed; /* Parallax effect */
@@ -302,13 +322,14 @@ svg#play:hover #triangle {
   z-index: 1;
 }
 
-.header-section h1, .header-section p {
+.header-section h1,
+.header-section p {
   position: relative;
   z-index: 2;
 }
 
 .header-section h1 {
-  color: #DC3545;
+  color: #dc3545;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -323,7 +344,7 @@ svg#play:hover #triangle {
 
 /* SERVICES SECTION */
 .services-section {
-  background-image: url('../img/services_bg.png'); /* Background image */
+  background-image: url("../img/services_bg.png"); /* Background image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -343,13 +364,15 @@ svg#play:hover #triangle {
   z-index: 1; /* Keeps overlay below video */
 }
 
-.services-section h2, .services-section p, .services-section .btn {
+.services-section h2,
+.services-section p,
+.services-section .btn {
   position: relative;
   z-index: 2; /* Ensures content appears above overlay */
 }
 
 .services-section h2 {
-  color: #DC3545;
+  color: #dc3545;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -370,21 +393,18 @@ svg#play:hover #triangle {
   border-radius: 5px;
 }
 
-
-
 .card-title {
   position: relative;
   z-index: 2; /* Ensure above overlays */
-  color: #DC3545; /* Keep text visible and branded */
+  color: #dc3545; /* Keep text visible and branded */
   font-weight: bold; /* Make it stand out */
 }
-
 
 /* ABOUT SECTION FOR INDEX PAGE */
 /* ABOUT SECTION WITH BACKGROUND IMAGE */
 #about-section-index {
   position: relative; /* Ensures the overlay stays within the section */
-  background-image: url('../img/whatwedo.png'); /* Replace with your image path */
+  background-image: url("../img/whatwedo.png"); /* Replace with your image path */
   background-size: cover; /* Ensures the image covers the entire section */
   background-position: center; /* Centers the image */
   background-attachment: fixed; /* Creates a subtle parallax effect */
@@ -413,7 +433,7 @@ svg#play:hover #triangle {
 }
 
 #about-section-index h2 {
-  color: #DC3545; /* Bootstrap "danger" color for the heading */
+  color: #dc3545; /* Bootstrap "danger" color for the heading */
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -428,13 +448,13 @@ svg#play:hover #triangle {
 .card-title {
   font-size: 1.25rem; /* Match the size for consistency */
   font-weight: bold; /* Ensures bold headings */
-  color: #DC3545; /* Consistent red color */
+  color: #dc3545; /* Consistent red color */
 }
 
 .card-text {
   font-size: 1rem; /* Matches text size across sections */
   line-height: 1.5; /* Improved readability */
-  color: #FFFFFF; /* Ensures consistent text color */
+  color: #ffffff; /* Ensures consistent text color */
 }
 
 /* CTA Button Consistency */
@@ -443,8 +463,8 @@ svg#play:hover #triangle {
   padding: 10px 20px; /* Consistent button padding */
   font-size: 1rem; /* Button font size */
   font-weight: 600;
-  color: #FFFFFF;
-  background-color: #DC3545; /* Red theme color */
+  color: #ffffff;
+  background-color: #dc3545; /* Red theme color */
   border: none;
   border-radius: 5px;
   text-transform: uppercase;
@@ -454,14 +474,14 @@ svg#play:hover #triangle {
 
 .cta-btn:hover {
   background-color: #ffffff;
-  color: #DC3545;
+  color: #dc3545;
   transform: scale(1.05); /* Subtle hover effect */
 }
 
 /* Card Container Consistency */
 .card {
-  background-color: #1E1E1E; /* Consistent dark background */
-  color: #FFFFFF;
+  background-color: #1e1e1e; /* Consistent dark background */
+  color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -475,14 +495,14 @@ svg#play:hover #triangle {
 .section-title {
   font-size: 2rem; /* Matches the About section title */
   font-weight: bold;
-  color: #DC3545; /* Red theme color */
+  color: #dc3545; /* Red theme color */
   margin-bottom: 1.5rem;
 }
 
 /* Section Paragraph Consistency */
 .section-paragraph {
   font-size: 1.1rem;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 2rem;
 }
 
@@ -502,10 +522,9 @@ svg#play:hover #triangle {
   }
 }
 
-
 /* ABOUT SECTION FOR ABOUT PAGE */
 #about-section-page {
-  background-image: url('../img/about-bg.jpg'); /* Add any background image if desired */
+  background-image: url("../img/about-bg.jpg"); /* Add any background image if desired */
   background-size: cover;
   background-position: center;
   padding: 80px 0;
@@ -513,7 +532,7 @@ svg#play:hover #triangle {
 }
 
 #about-section-page h2 {
-  color: #DC3545;
+  color: #dc3545;
   font-weight: bold;
 }
 
@@ -568,7 +587,6 @@ svg#play:hover #triangle {
   }
 }
 
-
 /* ABOUT HERO SECTION STYLING */
 .about-hero-section {
   position: relative;
@@ -612,15 +630,16 @@ svg#play:hover #triangle {
 }
 
 #about-play #triangle {
-  fill: rgba(22,22,22,0);
+  fill: rgba(22, 22, 22, 0);
   transition: 500ms;
 }
 
 #about-play:hover #triangle {
-  fill: #DC3545;
+  fill: #dc3545;
 }
 
-#about-play #lineOne, #about-play #lineTwo {
+#about-play #lineOne,
+#about-play #lineTwo {
   transition: 1s;
 }
 
@@ -650,11 +669,10 @@ svg#play:hover #triangle {
   height: 100%;
 }
 
-
 /* FOOTER WITH BACKGROUND IMAGE */
 .footer {
   position: relative;
-  background-image: url('../img/footer.png'); /* Replace with your footer background image */
+  background-image: url("../img/footer.png"); /* Replace with your footer background image */
   background-size: cover; /* Ensure the image covers the entire footer */
   background-position: center bottom; /* Align the background image to the bottom */
   background-attachment: fixed; /* Add a parallax effect if desired */
@@ -689,7 +707,7 @@ svg#play:hover #triangle {
 }
 
 .footer a:hover {
-  color: #DC3545; /* Change to "danger" red on hover */
+  color: #dc3545; /* Change to "danger" red on hover */
 }
 
 /* Footer Quick Links */
@@ -718,13 +736,11 @@ svg#play:hover #triangle {
   transform: scale(1.2); /* Slightly enlarge icons on hover */
 }
 
-
-
 /* Adjusting 404 Header Section */
 .error-container {
   text-align: center;
   padding: 120px 20px 40px; /* Top padding ensures space below the navbar */
-  background-image: url('../img/404.png'); /* Replace with your desired background image path */
+  background-image: url("../img/404.png"); /* Replace with your desired background image path */
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Optional parallax effect */
@@ -753,7 +769,7 @@ svg#play:hover #triangle {
 
 /* Styling for 404 Text */
 .error-code {
-  color: #DC3545; /* Bootstrap "danger" red for standout text */
+  color: #dc3545; /* Bootstrap "danger" red for standout text */
   font-size: 5rem; /* Adjust size as needed */
   margin-bottom: 20px;
 }
@@ -772,7 +788,7 @@ svg#play:hover #triangle {
 }
 
 .error-detail a {
-  color: #DC3545; /* Highlight button/link with red color */
+  color: #dc3545; /* Highlight button/link with red color */
   text-decoration: none;
 }
 
@@ -785,7 +801,7 @@ svg#play:hover #triangle {
   padding: 10px 20px;
   font-size: 1.1rem;
   border-radius: 5px;
-  background-color: #DC3545;
+  background-color: #dc3545;
   color: #ffffff;
   border: none;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -793,7 +809,7 @@ svg#play:hover #triangle {
 
 .error-detail .btn:hover {
   background-color: #ffffff;
-  color: #DC3545;
+  color: #dc3545;
   transform: scale(1.05);
 }
 
@@ -835,7 +851,7 @@ svg#play:hover #triangle {
   font-size: 1.2rem;
   font-weight: bold;
   color: #ffffff;
-  background: #DC3545;
+  background: #dc3545;
   border: 2px solid transparent;
   border-radius: 5px;
   text-transform: uppercase;
@@ -850,22 +866,23 @@ svg#play:hover #triangle {
   font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
-  background-color: #DC3545; /* Solid red color */
-  border: 2px solid #DC3545;
+  background-color: #dc3545; /* Solid red color */
+  border: 2px solid #dc3545;
   border-radius: 4px;
   text-transform: uppercase;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease, color 0.3s ease;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Hover State */
 .cta-btn:hover {
   background-color: transparent; /* Makes the button background transparent */
-  color: #DC3545; /* Changes text to match the border */
+  color: #dc3545; /* Changes text to match the border */
   transform: scale(1.03); /* Slight scaling effect */
   box-shadow: 0 4px 10px rgba(220, 53, 69, 0.5); /* Subtle red glow */
-  border-color: #DC3545; /* Keeps the border red */
+  border-color: #dc3545; /* Keeps the border red */
 }
 
 /* Button Active/Pressed State */
