@@ -127,7 +127,7 @@
           <div class="col-lg-3 col-md-6 mb-4">
               <div class="card bg-dark text-white h-100">
                   <div class="card-body text-center">
-                      <i class="fas fa-comments fa-3x text-danger mb-3"></i>
+                      <i class="fas fa-comments fa-3x text-white icon-glow mb-3"></i>
                       <h3 class="card-title text-danger">Deep Dive Conversation</h3>
                       <p class="card-text">
                         First and most importantly is identifying the need for our services, and if our companies are a good fit for each other.  Once we have identified the opportunity to work together, and the most efficient starting point. We can schedule a DEEP DIVE conversation to create a strategy.
@@ -153,7 +153,7 @@
           <div class="col-lg-3 col-md-6 mb-4" data-aos="flip-up" data-aos-duration="1200">
               <div class="card bg-dark text-white h-100">
                   <div class="card-body text-center">
-                      <i class="fas fa-search fa-3x text-danger mb-3"></i>
+                      <i class="fas fa-search fa-3x text-white icon-glow mb-3"></i>
                       <h3 class="card-title text-danger">Getting Found (SEO)</h3>
                       <p class="card-text">
                         Once we have a working knowledge of your business and we are sure you are in front of your ideal customer, we can identify the most strategic use of video assets to guide these customers through your sales funnel.
@@ -179,7 +179,7 @@
           <div class="col-lg-3 col-md-6 mb-4" data-aos="flip-up" data-aos-duration="1200">
               <div class="card bg-dark text-white h-100">
                   <div class="card-body text-center">
-                      <i class="fas fa-video fa-3x text-danger mb-3"></i>
+                      <i class="fas fa-video fa-3x text-white icon-glow mb-3"></i>
                       <h3 class="card-title text-danger">Strategic Video Assets</h3>
                       <p class="card-text">
                           Once we have a working knowledge of your business, we can identify the most strategic use of video assets.
@@ -200,7 +200,7 @@
 			<div class="container-lg">
 				<div class="row justify-content-center">
 					<div class="col-lg-8 text-center">
-						<h2 class="fw-bold mb-5 text-danger" data-aos="flip-up" data-aos-duration="1250">Services</h2>
+						<h2 class="fw-bold mb-5 text-danger" data-aos="flip-up" data-aos-duration="1250">Our Video Services</h2>
 					</div>
 				</div>
 				<div class="row justify-content-center">
@@ -306,9 +306,9 @@
 					<div class="col-md-4 mb-4">
 						<h5 class="text-danger">Quick Links</h5>
 						<ul class="list-unstyled">
-							<li><a href="#home" class="text-white">Home</a></li>
-							<li><a href="#services" class="text-white">Services</a></li>
-							<li><a href="#about" class="text-white">About</a></li>
+							<li><a href="./index.html" class="text-white">Home</a></li>
+							<li><a href="./approach.html" class="text-white">Our Approach</a></li>
+							<li><a href="./services.html" class="text-white">Services</a></li>
 						</ul>
 					</div>
 
@@ -333,14 +333,14 @@
 				<!-- Footer Bottom -->
 				<div class="row mt-4">
 					<div class="col text-center">
-						<p class="text-white mb-0">&copy; 2024 The Faulty Filter Company. All Rights Reserved.</p>
+						<p class="text-white mb-0">&copy; <span id="currentYear"></span> The Faulty Filter Company. All Rights Reserved.</p>
 						<div class="social-links mt-3">
-							<a href="#" class="text-danger me-2"><i class="fab fa-facebook-f"></i></a>
-							<a href="#" class="text-danger me-2"><i class="fab fa-instagram"></i></a>
-							<a href="#" class="text-danger me-2"><i class="fab fa-tiktok"></i></a>
-							<a href="#" class="text-danger me-2"><i class="fab fa-linkedin-in"></i></a>
-							<a href="#" class="text-danger me-2"><i class="fab fa-youtube"></i></a>
-							<a href="#" class="text-danger"><i class="fab fa-twitter"></i></a>
+							<!-- <a href="#" class="text-danger me-2"><i class="fab fa-facebook-f"></i></a> -->
+							<!-- <a href="#" class="text-danger me-2"><i class="fab fa-instagram"></i></a> -->
+							<!-- <a href="#" class="text-danger me-2"><i class="fab fa-tiktok"></i></a> -->
+							<!-- <a href="#" class="text-danger me-2"><i class="fab fa-linkedin-in"></i></a> -->
+							<a href="https://www.youtube.com/@TheFaultyFilterCompany" class="text-danger me-2"><i class="fab fa-youtube text-white icon-glow"></i></a>
+							<!-- <a href="#" class="text-danger"><i class="fab fa-twitter"></i></a> -->
 						</div>
 					</div>
 				</div>
@@ -350,7 +350,9 @@
 
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+		<script>
+			document.getElementById("currentYear").textContent = new Date().getFullYear();
+		</script>		
 		<script src="js/aos.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script>
