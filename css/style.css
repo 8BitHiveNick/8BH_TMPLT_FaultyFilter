@@ -62,6 +62,21 @@ a:hover {
   margin-top: -100px; /* Adjust based on the height of your navbar */
 }
 
+/* Tablet/Mobile screens */
+@media (max-width: 992px) {
+  .custom-quote-button {
+    margin-right: 10px; /* Add margin between the button and the hamburger menu */
+  }
+}
+
+/* Full-screen (desktop) */
+@media (min-width: 992px) {
+  .custom-quote-button {
+    margin-left: 20px; /* Add margin between the text and the button */
+  }
+}
+
+
 /* HERO */
 .home {
   position: relative;
