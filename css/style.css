@@ -997,3 +997,128 @@ svg:hover #lineTwo {
 .icon-glow {
   text-shadow: 0 0 10px rgba(220, 53, 69, 0.8), 0 0 20px rgba(220, 53, 69, 0.6);
 }
+
+/* Individual Service Pages */
+.small-video {
+  width: 50%; /* Start smaller on larger screens */
+  max-width: 600px; /* Limit maximum width */
+  height: auto; /* Maintain aspect ratio */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  border-radius: 8px; /* Optional rounded corners */
+  transition: all 0.3s ease; /* Smooth scaling effect on resize */
+}
+
+@media (max-width: 768px) {
+  .small-video {
+    width: 90%; /* Adjust for smaller screens */
+    max-width: none; /* Allow full width */
+  }
+}
+
+/* Static Background for Showcase Section */
+.showcase-section {
+  background-image: url('../img/whatwedo.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Makes the background static */
+  color: #ffffff; /* Ensure text contrast */
+  padding: 50px 0;
+  position: relative;
+}
+
+.showcase-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Optional dark overlay */
+  z-index: 1; /* Keep overlay below content */
+}
+
+.showcase-section > .container {
+  position: relative;
+  z-index: 2; /* Ensure content is above overlay */
+}
+
+/* Static Background for Key Benefits Section */
+.key-benefits-section {
+  background-image: url('../img/keybenefits.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+  padding: 50px 0;
+  position: relative;
+}
+
+.key-benefits-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Optional dark overlay */
+  z-index: 1;
+}
+
+.key-benefits-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Static Background for Showcase Section */
+.servicehero-section {
+  background-image: url('../img/hero.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Makes the background static */
+  color: #ffffff; /* Ensure text contrast */
+  padding: 50px 0;
+  position: relative;
+}
+
+.servicehero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Optional dark overlay */
+  z-index: 1; /* Keep overlay below content */
+}
+
+.servicehero-section > .container {
+  position: relative;
+  z-index: 2; /* Ensure content is above overlay */
+}
+
+/* Static Background for Showcase Section */
+.serviceintro-section {
+  background-image: url('../img/vbc_bg.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Makes the background static */
+  color: #ffffff; /* Ensure text contrast */
+  padding: 50px 0;
+  position: relative;
+}
+
+.serviceintro-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Optional dark overlay */
+  z-index: 1; /* Keep overlay below content */
+}
+
+.serviceintro-section > .container {
+  position: relative;
+  z-index: 2; /* Ensure content is above overlay */
+}
