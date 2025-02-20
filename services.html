@@ -69,7 +69,7 @@
 <section class="services-section py-5">
     <div class="container">
         <!-- Service 1 -->
-        <div class="row align-items-center mb-5 flex-md-row-reverse ">
+        <div id="businesscard" class="row align-items-center mb-5 flex-md-row-reverse ">
             
             <div class="col-md-6 order-md-1 order-2">
                 <video class="video-embed" autoplay loop muted playsinline>
@@ -91,7 +91,7 @@
         </div>
         
         <!-- Service 2 -->
-        <div class="row align-items-center mb-5">
+        <div id="testimonial" class="row align-items-center mb-5">
 
             <div class="col-md-6 order-md-1 order-2">
                 <video class="video-embed" autoplay loop muted playsinline>
@@ -114,7 +114,7 @@
         </div>
         
         <!-- Service 3 -->
-        <div class="row align-items-center mb-5 flex-md-row-reverse">
+        <div id="training" class="row align-items-center mb-5 flex-md-row-reverse">
             
             <div class="col-md-6 order-md-1 order-2">
                 <video class="video-embed" autoplay loop muted playsinline>
@@ -137,7 +137,7 @@
         </div>
 
         <!-- Service 4 -->
-        <div class="row align-items-center mb-5 flex-md-row-reverse">
+        <div id="faq" class="row align-items-center mb-5 flex-md-row-reverse">
             
           <div class="col-md-6 order-md-2 order-1">
               <video class="video-embed" autoplay loop muted playsinline>
@@ -160,7 +160,7 @@
       </div>
 
       <!-- Service 5 -->
-      <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div id="sales" class="row align-items-center mb-5 flex-md-row-reverse">
             
         <div class="col-md-6 order-md-1 order-2">
             <video class="video-embed" autoplay loop muted playsinline>
@@ -183,7 +183,7 @@
     </div>
 
     <!-- Service 6 -->
-    <div class="row align-items-center mb-5 flex-md-row-reverse">
+    <div id="ads" class="row align-items-center mb-5 flex-md-row-reverse">
             
       <div class="col-md-6 order-md-2 order-1">
           <video class="video-embed" autoplay loop muted playsinline>
@@ -206,7 +206,7 @@
   </div>
 
   <!-- Service 7 -->
-  <div class="row align-items-center mb-5 flex-md-row-reverse">
+  <div id="social_media" class="row align-items-center mb-5 flex-md-row-reverse">
             
     <div class="col-md-6 order-md-1 order-2">
         <video class="video-embed" autoplay loop muted playsinline>
@@ -228,6 +228,29 @@
     </div>
 </div>
 
+    <!-- Service 8 -->
+    <div id="seo" class="row align-items-center mb-5 flex-md-row-reverse">
+            
+      <div class="col-md-6 order-md-2 order-1">
+          <video class="video-embed" autoplay loop muted playsinline>
+            <source src="./img/v_seo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+      <!-- YOUTUBE START -->
+      <!-- <div class="col-md-6 order-md-1 order-2">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/QdBZY2fkU-0?controls=1&modestbranding=1&rel=0" allowfullscreen></iframe>
+      </div> -->
+      <!-- YOUTUBE END -->
+
+      <div class="col-md-6 order-md-1 order-2">
+          <h2>Seach Engine Optimization (SEO)</h2>
+          <p>We could create the greatest video ever made for your business, however, if your audience is not finding your company, nobody will ever see it. Making sure we are reaching the consumer you’re trying to reach is essential.</p>
+          <a href="./svc_seo.html" class="btn cta-btn">LEARN MORE</a>
+      </div>
+  </div>
+
     </div>
 </section>
 <!-- SERVICES END -->
@@ -244,10 +267,10 @@
 						</p>
 						<p class="text-white">
 							<strong>Phone:</strong> <a href="tel:+1234567890" class="text-danger">+1 (330) 888-5406</a><br />
-							<strong>Email:</strong> <a href="mailto:info@faultyfilter.com" class="text-danger">info@faultyfilter.com</a><br />
-							Medina, OH 44256
 						</p>
+						<a href="./contact.html" class="btn cta-btn">Get In Touch</a>
 					</div>
+
 
 					<!-- Quick Links Section -->
 					<div class="col-md-4 mb-4">
@@ -301,7 +324,36 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          if (window.location.hash) {
+              let target = document.querySelector(window.location.hash);
+              if (target) {
+                  setTimeout(() => {
+                      target.scrollIntoView({ behavior: "smooth" });
+                  }, 100);
+              }
+          }
+      });
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.location.hash) {
+                let target = document.querySelector(window.location.hash);
+                if (target) {
+                    let navbarHeight = document.querySelector('.navbar').offsetHeight; // Get navbar height
+                    let offset = navbarHeight + 20; // Add some extra padding
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: target.offsetTop - offset, // Adjust for navbar height
+                            behavior: "smooth"
+                        });
+                    }, 100);
+                }
+            }
+        });
+        </script>
+        
     <script>
       AOS.init();
     </script>
