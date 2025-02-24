@@ -526,7 +526,7 @@ svg:hover #lineTwo {
       /* align-items: stretch; */ /* Key for equal height */
   }
   #about-section-index .card {
-    min-height: 450px; /* Adjust height as needed */
+    min-height: 420px; /* Adjust height as needed */
   }
 }
 

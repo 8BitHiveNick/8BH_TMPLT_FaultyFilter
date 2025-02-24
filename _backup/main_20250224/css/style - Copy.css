@@ -519,32 +519,36 @@ svg:hover #lineTwo {
   box-shadow: 0 0 20px 10px rgba(220, 53, 69, 0.6); /* Centered and larger red shadow */
 }
 
-/* Media Query for Large Screens */
 @media (min-width: 992px) {
-  #about-section-index .card-row {
-      flex-wrap: nowrap;
-      /* align-items: stretch; */ /* Key for equal height */
+  #about-section-index .row {
+      display: flex; /* Ensure all cards are aligned in the same row */
+      align-items: stretch; /* Stretch all cards to the same height */
   }
-  #about-section-index .card {
-    min-height: 450px; /* Adjust height as needed */
-  }
-}
 
-  #about-section-index .about-card {
-      /* height: 400px;  If using forced height, adjust as needed */
+  #about-section-index .col-lg-3 {
+      display: flex; /* Ensures columns take the full height of the row */
+  }
+
+  #about-section-index .card {
+      flex: 1; /* Makes all cards take equal space */
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      height: 100%; /* Force cards to take full height */
   }
 
   #about-section-index .card-body {
-      flex-grow: 1;
+      flex-grow: 1; /* Ensures content stretches within the card */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
   }
 
-  #about-section-index .card .cta-btn {
-      margin-top: auto;
-      align-self: center;
+  #about-section-index .btn.cta-btn {
+      margin-top: auto; /* Forces button alignment at the bottom */
   }
- /* Closing brace of the media query */
+}
+
 
 /* CTA Button Consistency */
 .cta-btn {
