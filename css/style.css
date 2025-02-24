@@ -544,7 +544,7 @@ svg:hover #lineTwo {
       margin-top: auto;
       align-self: center;
   }
-} /* Closing brace of the media query */
+ /* Closing brace of the media query */
 
 /* CTA Button Consistency */
 .cta-btn {
