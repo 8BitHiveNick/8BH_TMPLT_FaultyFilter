@@ -1,0 +1,1124 @@
+/* DEFAULTS */
+html,
+body {
+  background-color: #000; /* Set background color to black */
+  width: 100%; /* Ensure full width */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+/* Change color to white on hover for all hyperlinks */
+a:hover {
+  color: #ffffff; /* Changes color to white on hover */
+}
+
+/* NAVIGATION */
+
+.nav-link-hover:hover {
+  color: #dc3545 !important; /* Use the warning color */
+}
+
+/* Dropdown menu styling to match the navbar */
+.navbar .dropdown-menu {
+  background-color: #343a40; /* Same as navbar background */
+  /* If you have a specific font family in use for the navbar, apply it here as well */
+}
+
+/* Dropdown item styling for text color and hover effects */
+.navbar .dropdown-menu .dropdown-item {
+  color: #ffffff; /* White text for dropdown items */
+  font-weight: normal; /* Match the font weight as per your preference, adjust if needed */
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #dc3545; /* Optional: Change background color on hover to match the "warning" theme */
+  color: #343a40; /* Change text color on hover for better contrast, if needed */
+}
+
+.navbar-brand > span {
+  display: block; /* Continue treating each span as a block-level element */
+  margin: 0; /* Reset default margins */
+  padding: 0; /* Reset default paddings */
+}
+
+/* Adjust the bottom margin of the first span */
+.navbar-brand > span:first-child {
+  letter-spacing: 1.4px;
+  margin-bottom: -5px; /* Pulls the "Technology" text closer to "8-Bit Hive" */
+}
+
+/* Optional: Adjust the top margin of the second span if needed */
+.navbar-brand > span:nth-child(2) {
+  margin-top: -5px; /* Further adjustment if needed */
+  letter-spacing: 1.4px; /* Keep your previous adjustments */
+  font-size: 0.9em; /* Keep your previous adjustments */
+}
+
+/* Ensure headers are not hidden behind the navbar */
+.section-header {
+  padding-top: 100px; /* Adjust based on the height of your navbar */
+  margin-top: -100px; /* Adjust based on the height of your navbar */
+}
+
+/* Tablet/Mobile screens */
+@media (max-width: 992px) {
+  .custom-quote-button {
+    margin-right: 10px; /* Add margin between the button and the hamburger menu */
+  }
+}
+
+/* Full-screen (desktop) */
+@media (min-width: 992px) {
+  .custom-quote-button {
+    margin-left: 20px; /* Add margin between the text and the button */
+  }
+}
+
+
+/* HERO */
+.home {
+  position: relative;
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8); /* Dark grey overlay */
+  z-index: 1;
+}
+
+/* Ensure content is above the overlay */
+.home > .container-lg {
+  position: relative;
+  z-index: 2;
+}
+
+svg#play {
+  width: 200px;
+  margin: 120px auto;
+  display: block;
+  cursor: pointer;
+  transform-origin: 50% 50%;
+}
+
+svg#play #triangle {
+  fill: rgba(22, 22, 22, 0);
+  transition: 500ms;
+  transform-origin: 50% 50%;
+}
+svg#play:hover #triangle {
+  fill: #dc3545;
+  transform-origin: 50% 50%;
+}
+
+svg #lineOne,
+svg #lineTwo {
+  transform-origin: 50% 50%;
+  transition: 1s;
+}
+
+svg:hover #lineOne {
+  transform: rotate(260deg);
+  -webkit-transform: rotate(260deg);
+  -moz-transform: rotate(260deg);
+  -o-transform: rotate(260deg);
+  transform-origin: 50% 50%;
+}
+
+svg:hover #lineTwo {
+  transform: rotate(-450deg);
+  transform-origin: 50% 50%;
+}
+
+/* Optionally, if you want to ensure the image covers older browsers that don't support background-attachment: fixed */
+@supports not (background-attachment: fixed) {
+  .home {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-text {
+    margin-top: 12rem; /* Adjust the value as needed */
+  }
+}
+
+/* Ensure the video container is hidden on load */
+#responsive-video {
+  display: none;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+}
+
+/* Style the iframe to cover the container */
+#responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Style the iframe to cover the container */
+.responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* PORTFOLIO SECTION BACKGROUND */
+.portfolio {
+  position: relative; /* Ensures all content stays within this section */
+  background-image: url("../img/services_bg.png"); /* Re-enable background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Parallax effect */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Center all content in the section */
+.portfolio .container-lg,
+.portfolio h2,
+.portfolio .card-body {
+  text-align: center;
+}
+
+/* Style for the Portfolio Heading */
+.portfolio h2 {
+  color: #dc3545; /* Bootstrap "danger" color for the heading */
+  font-weight: bold;
+  margin-bottom: 30px;
+  position: relative; /* Keep it positioned within the portfolio section */
+}
+
+/* Card Appearance */
+.portfolio .card {
+  background-color: rgba(
+    52,
+    58,
+    64,
+    0.8
+  ); /* Semi-transparent dark background */
+  color: #fff;
+  overflow: hidden;
+  padding: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex; /* Flexbox layout for uniform height */
+  flex-direction: column; /* Stack content vertically */
+  height: 100%; /* Ensures cards stretch uniformly */
+}
+
+/* Hover effect for cards */
+.portfolio .card:hover {
+  transform: scale(1.01);
+  background-image: linear-gradient(to right, black, #503033, grey);
+}
+
+/* Image Styling and Hover Effect */
+.portfolio .card .card-img-top {
+  width: calc(100% - 10px);
+  height: auto;
+  margin: 5px;
+  object-fit: cover;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%);
+}
+
+/* Button Styling */
+.portfolio .card .btn {
+  margin-top: auto; /* Pushes the button to the bottom */
+  align-self: center; /* Ensures the button stays centered */
+  width: auto; /* Prevents the button from stretching across the card */
+  padding: 10px 20px; /* Adjust padding for a consistent size */
+}
+
+.portfolio .card:hover .card-img-top {
+  filter: grayscale(0%);
+}
+
+/* Ensure card-body content takes up available space */
+.portfolio .card-body {
+  flex-grow: 1; /* Pushes the card content to fill available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Button always stays near the bottom */
+.portfolio .card .btn {
+  margin-top: auto; /* Ensures the button aligns to the bottom */
+}
+
+/* Center button in card */
+.portfolio .card .btn-warning {
+  color: #343a40;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.portfolio .card .btn-warning:hover {
+  background-color: #dc3545;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.portfolio .card-body {
+  padding: 15px;
+}
+
+/* Make card title bold */
+.portfolio .card-title {
+  font-weight: bold;
+}
+
+/* Styling for right arrows (desktop) */
+.d-lg-block .fa-arrow-right {
+  display: block;
+  margin: 0 auto; /* Center the arrow between cards */
+}
+
+/* Styling for down arrows (mobile/tablet) */
+.d-lg-none .fa-arrow-down {
+  display: block;
+  margin: 10px auto; /* Add spacing for better visibility */
+}
+
+/* Optional: Adjust arrow size or spacing if needed */
+.fa-arrow-right,
+.fa-arrow-down {
+  color: #dc3545; /* Keep the red color consistent */
+  font-size: 2.5rem; /* Adjust arrow size */
+  opacity: 0.8; /* Slightly transparent for subtle effect */
+}
+
+
+
+/* HEADER SECTION */
+.header-section {
+  background-image: url("../img/hero.jpg"); /* Replace with your image path */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  background-attachment: fixed; /* Parallax effect */
+  color: #ffffff;
+  padding: 60px 0;
+  margin-top: 70px;
+  text-align: center;
+  position: relative;
+}
+
+.header-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay for readability */
+  z-index: 1;
+}
+
+.header-section h1,
+.header-section p {
+  position: relative;
+  z-index: 2;
+}
+
+.header-section h1 {
+  color: #dc3545;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.header-section p {
+  color: #ffffff;
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* SERVICES SECTION */
+.services-section {
+  background-image: url("../img/services_bg.png"); /* Background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+  padding: 50px 0;
+  position: relative;
+  z-index: 0; /* Ensures section is beneath the video */
+}
+.services-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark grey overlay */
+  z-index: 1; /* Keeps overlay below video */
+}
+
+.services-section h2,
+.services-section p,
+.services-section .btn {
+  position: relative;
+  z-index: 2; /* Ensures content appears above overlay */
+}
+
+.services-section h2 {
+  color: #dc3545;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.services-section p {
+  color: #ffffff;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.services-section .video-embed {
+  position: relative;
+  z-index: 2; /* Places iframe above overlay */
+  width: 100%;
+  height: 315px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.card-title {
+  position: relative;
+  z-index: 2; /* Ensure above overlays */
+  color: #dc3545; /* Keep text visible and branded */
+  font-weight: bold; /* Make it stand out */
+}
+
+/* Default card appearance */
+.portfolio .card {
+  background-color: rgba(52, 58, 64, 0.8); /* Semi-transparent dark background */
+  color: #fff;
+  overflow: hidden;
+  padding: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow by default */
+}
+
+/* Red shadow on hover */
+.portfolio .card:hover {
+  transform: scale(1.03); /* Slightly enlarge the card on hover */
+  box-shadow: 0 0 20px 10px rgba(220, 53, 69, 0.6); /* Centered and larger red shadow */
+  background-image: none; /* Remove gradient */
+}
+
+/* Image styling remains consistent */
+.portfolio .card .card-img-top {
+  width: calc(100% - 10px);
+  height: auto;
+  margin: 5px;
+  object-fit: cover;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%);
+}
+
+/* Remove gradient hover effect on images */
+.portfolio .card:hover .card-img-top {
+  filter: grayscale(0%);
+}
+
+
+/* ABOUT SECTION FOR INDEX PAGE */
+/* ABOUT SECTION WITH BACKGROUND IMAGE */
+#about-section-index {
+  position: relative; /* Ensures the overlay stays within the section */
+  background-image: url("../img/whatwedo.png"); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Creates a subtle parallax effect */
+  padding: 60px 0; /* Adjust the padding as needed */
+  color: #ffffff; /* Ensures text is readable over the image */
+  overflow: hidden; /* Prevents any child content from overflowing */
+}
+
+/* Optional Overlay */
+#about-section-index::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay to enhance text readability */
+  z-index: 1; /* Ensures the overlay stays behind the text */
+}
+
+/* Ensure content appears above the overlay */
+#about-section-index .container {
+  position: relative;
+  z-index: 2; /* Keeps the content on top of the overlay */
+  text-align: center; /* Centers all text */
+}
+
+#about-section-index h2 {
+  color: #dc3545; /* Bootstrap "danger" color for the heading */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#about-section-index p {
+  color: #ffffff;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* Consistent Card Title and Text Font Sizes */
+.card-title {
+  font-size: 1.25rem; /* Match the size for consistency */
+  font-weight: bold; /* Ensures bold headings */
+  color: #dc3545; /* Consistent red color */
+}
+
+.card-text {
+  font-size: 1rem; /* Matches text size across sections */
+  line-height: 1.5; /* Improved readability */
+  color: #ffffff; /* Ensures consistent text color */
+}
+
+/* Default card appearance */
+#about-section-index .row .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow by default */
+}
+
+/* Centered and slightly larger red shadow on hover */
+#about-section-index .row .card:hover {
+  transform: scale(1.03); /* Slightly enlarge the card on hover */
+  box-shadow: 0 0 20px 10px rgba(220, 53, 69, 0.6); /* Centered and larger red shadow */
+}
+
+@media (min-width: 992px) {
+  #about-section-index .row {
+      display: flex; /* Ensure all cards are aligned in the same row */
+      align-items: stretch; /* Stretch all cards to the same height */
+  }
+
+  #about-section-index .col-lg-3 {
+      display: flex; /* Ensures columns take the full height of the row */
+  }
+
+  #about-section-index .card {
+      flex: 1; /* Makes all cards take equal space */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%; /* Force cards to take full height */
+  }
+
+  #about-section-index .card-body {
+      flex-grow: 1; /* Ensures content stretches within the card */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  #about-section-index .btn.cta-btn {
+      margin-top: auto; /* Forces button alignment at the bottom */
+  }
+}
+
+
+/* CTA Button Consistency */
+.cta-btn {
+  display: inline-block;
+  padding: 10px 20px; /* Consistent button padding */
+  font-size: 1rem; /* Button font size */
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #dc3545; /* Red theme color */
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: #ffffff;
+  color: #dc3545;
+  transform: scale(1.05); /* Subtle hover effect */
+}
+
+/* Card Container Consistency */
+.card {
+  background-color: #1e1e1e; /* Consistent dark background */
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03); /* Subtle hover scale */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Title Consistency */
+.section-title {
+  font-size: 2rem; /* Matches the About section title */
+  font-weight: bold;
+  color: #dc3545; /* Red theme color */
+  margin-bottom: 1.5rem;
+}
+
+/* Section Paragraph Consistency */
+.section-paragraph {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1.1rem; /* Slightly smaller for smaller screens */
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .cta-btn {
+    font-size: 0.9rem; /* Adjust button size */
+    padding: 8px 16px;
+  }
+}
+
+/* ABOUT SECTION FOR ABOUT PAGE */
+#about-section-page {
+  background-image: url("../img/about-bg.jpg"); /* Add any background image if desired */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  color: #ffffff;
+}
+
+#about-section-page h2 {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+#about-section-page p {
+  color: #ffffff;
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Center arrows between cards */
+.fa-arrow-right,
+.fa-arrow-down {
+  margin: 0 auto; /* Centers the arrows */
+  opacity: 0.8;
+}
+
+.fa-3x {
+  font-size: 2.5rem; /* Adjust arrow and icon sizes */
+}
+
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03); /* Adds subtle hover effect */
+}
+
+/* Add spacing for mobile arrows */
+.d-lg-none .fa-arrow-down {
+  margin: 10px 0;
+}
+
+/* Center the arrows between cards */
+.arrow-spacing {
+  margin: 20px auto; /* Adds vertical spacing */
+  display: block; /* Ensures arrows take up full width */
+  text-align: center; /* Centers the arrows horizontally */
+}
+
+/* Adjust spacing between stacked cards for mobile */
+@media (max-width: 992px) {
+  .col-md-6,
+  .col-lg-3 {
+    margin-bottom: 0; /* Prevent extra margins */
+  }
+
+  .arrow-spacing {
+    margin: 10px auto; /* Reduce spacing for smaller screens */
+  }
+}
+
+/* ABOUT HERO SECTION STYLING */
+.about-hero-section {
+  position: relative;
+  background-image: url("../img/about-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+  padding: 60px 0;
+  z-index: 0; /* Ensure base layer is beneath content */
+}
+
+.about-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  z-index: 1; /* Keeps overlay below the text and video */
+}
+
+.about-hero-section .about-text {
+  position: relative;
+  z-index: 2; /* Ensure text appears above overlay */
+}
+
+#about-video-container {
+  position: relative;
+  z-index: 2; /* Ensure video container appears above overlay */
+}
+
+/* Play Button SVG Styling */
+#about-play {
+  width: 200px;
+  margin: 120px auto;
+  display: block;
+  cursor: pointer;
+  transform-origin: 50% 50%;
+}
+
+#about-play #triangle {
+  fill: rgba(22, 22, 22, 0);
+  transition: 500ms;
+}
+
+#about-play:hover #triangle {
+  fill: #dc3545;
+}
+
+#about-play #lineOne,
+#about-play #lineTwo {
+  transition: 1s;
+}
+
+#about-play:hover #lineOne {
+  transform: rotate(260deg);
+}
+
+#about-play:hover #lineTwo {
+  transform: rotate(-450deg);
+}
+
+/* Responsive video container */
+#about-responsive-video {
+  display: none; /* Hidden by default */
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+#about-responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* FOOTER WITH BACKGROUND IMAGE */
+.footer {
+  position: relative;
+  background-image: url("../img/footer.png"); /* Replace with your footer background image */
+  background-size: cover; /* Ensure the image covers the entire footer */
+  background-position: center bottom; /* Align the background image to the bottom */
+  background-attachment: fixed; /* Add a parallax effect if desired */
+  padding: 60px 0;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Overlay for Footer */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black overlay */
+  z-index: 1;
+}
+
+/* Footer Content */
+.footer .container {
+  position: relative;
+  z-index: 2; /* Ensure content appears above overlay */
+  text-align: center; /* Center text and other content */
+}
+
+/* Footer Links */
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #dc3545; /* Change to "danger" red on hover */
+}
+
+/* Footer Quick Links */
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  font-size: 1rem;
+}
+
+/* Footer Social Links */
+.footer .social-links a {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: #ffffff;
+  transform: scale(1.2); /* Slightly enlarge icons on hover */
+}
+
+/* Adjusting 404 Header Section */
+.error-container {
+  text-align: center;
+  padding: 120px 20px 40px; /* Top padding ensures space below the navbar */
+  background-image: url("../img/404.png"); /* Replace with your desired background image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional parallax effect */
+  color: #ffffff; /* Ensures readability over the background */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay for Header Background */
+.error-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay to enhance text visibility */
+  z-index: 1;
+}
+
+/* Ensure Text Stays Above the Overlay */
+.error-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Styling for 404 Text */
+.error-code {
+  color: #dc3545; /* Bootstrap "danger" red for standout text */
+  font-size: 5rem; /* Adjust size as needed */
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.error-detail {
+  color: #ced4da; /* Subtle contrast color */
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.error-detail a {
+  color: #dc3545; /* Highlight button/link with red color */
+  text-decoration: none;
+}
+
+.error-detail a:hover {
+  color: #ffffff; /* On hover, text changes to white */
+}
+
+/* Button Styling */
+.error-detail .btn {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  background-color: #dc3545;
+  color: #ffffff;
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.error-detail .btn:hover {
+  background-color: #ffffff;
+  color: #dc3545;
+  transform: scale(1.05);
+}
+
+.section-offset {
+  margin-top: 70px; /* Adjust based on the navbar height */
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 315px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-container .play-button {
+  width: 100px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.video-container .play-button:hover {
+  transform: scale(1.1);
+}
+
+.video-container .video-embed {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.cta-btn {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: #dc3545;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Default Button Styling */
+.cta-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #dc3545; /* Solid red color */
+  border: 2px solid #dc3545;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease, color 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover State */
+.cta-btn:hover {
+  background-color: transparent; /* Makes the button background transparent */
+  color: #dc3545; /* Changes text to match the border */
+  transform: scale(1.03); /* Slight scaling effect */
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.5); /* Subtle red glow */
+  border-color: #dc3545; /* Keeps the border red */
+}
+
+/* Button Active/Pressed State */
+.cta-btn:active {
+  transform: scale(0.98); /* Shrinks slightly to mimic a press */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Minimizes shadow on press */
+}
+
+/* Video Embed Styling */
+.video-embed {
+  width: 100%; /* Makes the video responsive */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional: Rounds corners for a polished look */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  object-fit: cover; /* Ensures the video fills the container */
+}
+
+/* Approach Section */
+.icon-glow {
+  text-shadow: 0 0 10px rgba(220, 53, 69, 0.8), 0 0 20px rgba(220, 53, 69, 0.6);
+}
+
+/* Individual Service Pages */
+.small-video {
+  width: 50%; /* Start smaller on larger screens */
+  max-width: 600px; /* Limit maximum width */
+  height: auto; /* Maintain aspect ratio */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  border-radius: 8px; /* Optional rounded corners */
+  transition: all 0.3s ease; /* Smooth scaling effect on resize */
+}
+
+@media (max-width: 768px) {
+  .small-video {
+    width: 90%; /* Adjust for smaller screens */
+    max-width: none; /* Allow full width */
+  }
+}
+
+/* Static Background for Showcase Section */
+.showcase-section {
+  background-image: url('../img/whatwedo.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Makes the background static */
+  color: #ffffff; /* Ensure text contrast */
+  padding: 50px 0;
+  position: relative;
+}
+
+.showcase-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Optional dark overlay */
+  z-index: 1; /* Keep overlay below content */
+}
+
+.showcase-section > .container {
+  position: relative;
+  z-index: 2; /* Ensure content is above overlay */
+}
+
+/* Static Background for Key Benefits Section */
+.key-benefits-section {
+  background-image: url('../img/keybenefits.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+  padding: 50px 0;
+  position: relative;
+}
+
+.key-benefits-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Optional dark overlay */
+  z-index: 1;
+}
+
+.key-benefits-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Static Background for Showcase Section */
+.servicehero-section {
+  background-image: url('../img/hero.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Makes the background static */
+  color: #ffffff; /* Ensure text contrast */
+  padding: 50px 0;
+  position: relative;
+}
+
+.servicehero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Optional dark overlay */
+  z-index: 1; /* Keep overlay below content */
+}
+
+.servicehero-section > .container {
+  position: relative;
+  z-index: 2; /* Ensure content is above overlay */
+}
+
+/* Static Background for Showcase Section */
+.serviceintro-section {
+  background-image: url('../img/vbc_bg.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Makes the background static */
+  color: #ffffff; /* Ensure text contrast */
+  padding: 50px 0;
+  position: relative;
+}
+
+.serviceintro-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6); /* Optional dark overlay */
+  z-index: 1; /* Keep overlay below content */
+}
+
+.serviceintro-section > .container {
+  position: relative;
+  z-index: 2; /* Ensure content is above overlay */
+}

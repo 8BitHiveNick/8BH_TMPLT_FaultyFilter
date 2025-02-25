@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>The Faulty Filter Company</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="" />
+		<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap" rel="stylesheet" />
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico">
+		<link rel="icon" type="image/png" sizes="192x192" href="img/favicon_droid.png">
+  		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon_apple.png">
+		<link rel="stylesheet" href="css/aos.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<!-- NAVBAR START -->
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgba(52, 58, 64, 0.9); box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);">
+			<div class="container-lg" data-aos="fade-down" data-aos-duration="1250">
+				<a class="navbar-brand fw-bold fs-4" href="./index.html" data-aos="fade-down">
+					<span><img src="img/logo1_bw.png" alt="Faulty Filter Logo" style="height: 55px;" /></span>
+				</a>
+
+				<!-- Links for lg screens or larger, aligned to the right -->
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-none d-lg-flex">
+						<li class="nav-item"><a class="nav-link text-white nav-link-hover" href="./index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link text-white nav-link-hover" href="./approach.html">Our Approach</a></li>
+						<li class="nav-item"><a class="nav-link text-white nav-link-hover" href="./services.html">Services</a></li>
+					</ul>
+				</div>
+
+				<!-- "Get A Quote" Button - Always visible, aligned to the right with margin for small screens -->
+				<div class="ms-auto custom-quote-button" style="white-space: nowrap;">
+					<a href="./contact.html" class="btn cta-btn" style="padding: 0.375rem 0.75rem;">Get In Touch</a>
+				</div>
+
+				<!-- Dropdown for smaller screens -->
+				<div class="dropdown d-lg-none">
+					<button class="btn btn-danger px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-aos="fade-down" data-aos-duration="1000">
+						<i class="fas fa-bars" style="color: #ffffff;"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+						<li><a class="dropdown-item" href="#home">Home</a></li>
+						<li><a class="dropdown-item" href="#about">Our Approach</a></li>
+						<li><a class="dropdown-item" href="./services.html">Services</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- NAVBAR END -->
+
+		<!-- HERO SECTION START -->
+		<section class="home py-1" id="home">
+			<div class="container-lg">
+				<div class="row min-vh-100 align-items-center align-content-center">
+					<!-- TEXT CONTENT START -->
+					<div class="col-md-6 mt-5 mt-md-0 order-md-first" data-aos="fade-right" data-aos-duration="1250">
+						<div class="home-text">
+							<p class="text-white mb-1">Simplifying Marketing and Sales Funnels</p>
+							<h1 class="text-danger text-uppercase fs-1 fw-bold">Marketing Made Simple</h1>
+							<h2 class="fs-4 text-white">The Faulty Filter Company</h2>
+							<p class="mt-4 text-white">
+								<strong>We help your business get found by consumers and connect on a deeper level. By leveraging SEO and strategic video assets, we turn your prospects into loyal customers.</strong>
+							</p>
+						</div>
+					</div>
+					<!-- TEXT CONTENT END -->
+
+					<!-- </div>
+          <div class="col-md-6 order-last order-md-0">
+            <div class="home-right-text text-white" data-aos="fade-left" data-aos-duration="1250">
+              <h3 class="text-danger fw-bold">Why Video Matters</h3>
+              <p>Video content transcends traditional marketing by connecting emotionally with your audience. Our strategies fire neurons and tug at heartstrings, helping your message resonate deeply and convert viewers into customers.</p>
+              <h3 class="text-danger fw-bold">Our Approach</h3>
+              <p>We focus on two pillars: SEO to make your business discoverable and strategic video assets to craft messages that inspire action. Let us help your brand leave a lasting impact.</p>
+          </div>
+           -->
+
+					<!-- VIDEO CONTENT START -->
+					<div class="col-md-6 text-center" data-aos="fade-left" data-aos-duration="1250">
+						<div id="video-container">
+							<!-- Play Button SVG -->
+							<svg id="play" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<g fill="none">
+									<g transform="translate(2.000000, 2.000000)" stroke-width="4">
+										<path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#DC3545"></path>
+										<path
+											d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z"
+											id="triangle"
+											stroke="#DC3545"
+										></path>
+										<path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#DC3545"></path>
+									</g>
+								</g>
+							</svg>
+
+							<!-- Responsive Video Wrapper -->
+							<div id="responsive-video" class="responsive-video mt-4">
+								<iframe
+									id="youtube-video"
+									src=""
+									title="YouTube video player"
+									frameborder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									referrerpolicy="strict-origin-when-cross-origin"
+									allowfullscreen
+								></iframe>
+							</div>
+						</div>
+					</div>
+					<!-- VIDEO CONTENT END -->
+				</div>
+			</div>
+		</section>
+		<!-- HERO SECTION END -->
+
+		<!-- ABOUT SECTION FOR INDEX PAGE -->
+		<section id="about-section-index" class="about-section py-5">
+			<div class="container text-center">
+				<h2 class="section-title text-danger" data-aos="zoom-in" data-aos-duration="750">Our Approach</h2>
+				<p class="section-paragraph text-white" data-aos="fade-up" data-aos-duration="750">
+					Explore how our expertise in SEO, strategic video assets, and video content strategy can help your brand stand out, connect deeply, and drive success.
+				</p>
+
+				<!-- Service Cards Section -->
+<div class="row justify-content-center align-items-center mt-5" data-aos="flip-up" data-aos-duration="1200">
+    <!-- Card 1 -->
+    <div class="col-lg-3 col-md-6 mb-4 d-flex">
+        <div class="card bg-dark text-white w-100 d-flex flex-column">
+            <div class="card-body text-center d-flex flex-column flex-grow-1">
+                <i class="fas fa-comments fa-3x text-white icon-glow mb-3"></i>
+                <h3 class="card-title text-danger">Deep Dive Conversation</h3>
+                <p class="card-text">
+                    First and most importantly is identifying the need for our services, and if our companies are a good fit for each other.
+                    Once we have identified the opportunity to work together, and the most efficient starting point.
+                    We can schedule a DEEP DIVE conversation to create a strategy.
+                </p>
+                <div class="mt-auto">
+                    <a href="./approach.html" class="btn cta-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Arrow (Desktop) -->
+    <div class="d-none d-lg-flex col-lg-1 justify-content-center align-items-center">
+        <i class="fas fa-arrow-right fa-3x text-danger"></i>
+    </div>
+
+    <!-- Down Arrow (Mobile) -->
+    <div class="d-lg-none col-12 text-center mt-3">
+        <i class="fas fa-arrow-down fa-3x text-danger"></i>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-lg-3 col-md-6 mb-4 d-flex">
+        <div class="card bg-dark text-white w-100 d-flex flex-column">
+            <div class="card-body text-center d-flex flex-column flex-grow-1">
+                <i class="fas fa-search fa-3x text-white icon-glow mb-3"></i>
+                <h3 class="card-title text-danger">Getting Found (SEO)</h3>
+                <p class="card-text">
+                    Once we have a working knowledge of your business and we are sure you are in front of your ideal customer,
+                    we can identify the most strategic use of video assets to guide these customers through your sales funnel.
+                </p>
+                <div class="mt-auto">
+                    <a href="./approach.html" class="btn cta-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Arrow (Desktop) -->
+    <div class="d-none d-lg-flex col-lg-1 justify-content-center align-items-center">
+        <i class="fas fa-arrow-right fa-3x text-danger"></i>
+    </div>
+
+    <!-- Down Arrow (Mobile) -->
+    <div class="d-lg-none col-12 text-center mt-3">
+        <i class="fas fa-arrow-down fa-3x text-danger"></i>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-lg-3 col-md-6 mb-4 d-flex">
+        <div class="card bg-dark text-white w-100 d-flex flex-column">
+            <div class="card-body text-center d-flex flex-column flex-grow-1">
+                <i class="fas fa-video fa-3x text-white icon-glow mb-3"></i>
+                <h3 class="card-title text-danger">Strategic Video Assets</h3>
+                <p class="card-text">
+                    Strategically leveraging video assets in the right places is crucial.  Having a catalog of videos is equivalent to having a specialized sales team.  Being able to deploy these assets on your website,  location pages, social media, or even in an email campaign gives your company an extremely flexible marketing plan. 
+                </p>
+                <div class="mt-auto">
+                    <a href="./approach.html" class="btn cta-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      
+
+		</section>
+
+		<!-- SERVICES SECTION START -->
+		<section class="portfolio py-5" id="services">
+			<div class="container-lg">
+				<div class="row justify-content-center">
+					<div class="col-lg-8 text-center">
+						<h2 class="fw-bold mb-5 text-danger" data-aos="flip-up" data-aos-duration="1250">Our Video Services</h2>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<!-- Services Item -->
+					<div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in" data-aos-duration="1250">
+						<div class="card">
+							<img src="img/v_seo.png" class="card-img-top" alt="thumbnail for SEO card" />
+							<div class="card-body">
+								<h5 class="card-title text-danger">Seach Engine Optimization (SEO)</h5>
+								<p class="card-text">We could create the greatest video ever made for your business, however, if your audience is not finding your company, nobody will ever see it. Making sure we are reaching the consumer you’re trying to reach is essential.</p>
+								<a href="./services.html#seo" class="btn cta-btn">SEE MORE</a>
+							</div>
+						</div>
+					</div>
+					<!-- Services Ads -->
+					<div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in" data-aos-duration="1250">
+						<div class="card">
+							<img src="img/v_businesscard.png" class="card-img-top" alt="thumbnail for video business card card" />
+							<div class="card-body">
+								<h5 class="card-title text-danger">Video Business Card</h5>
+								<p class="card-text">A video Business card is exactly what it sounds like. It is an introduction to you and what your business is all about. The difference is how many people will see it!</p>
+								<a href="./services.html#businesscard" class="btn cta-btn">SEE MORE</a>
+							</div>
+						</div>
+					</div>
+					<!-- Services Video Testimonial -->
+					<div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in" data-aos-duration="1250">
+						<div class="card">
+							<img src="img/v_testimonial.png" class="card-img-top" alt="thumbnail for video testimonial card" />
+							<div class="card-body">
+								<h5 class="card-title text-danger">Video Testimonials</h5>
+								<p class="card-text">Video testimonials are great assets. Your potential customers are evaluating your company constantly. Having or not having positive opinions of the experience others have had with you is essential to them feeling comfortable with spending their money with you. Video does this exceptionally well!</p>
+								<a href="./services.html#testimonial" class="btn cta-btn">SEE MORE</a>
+							</div>
+						</div>
+					</div>
+					<!-- Services How-To -->
+					<div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in" data-aos-duration="1250">
+						<div class="card">
+							<img src="img/v_training.png" class="card-img-top" alt="thumbnail for training video card" />
+							<div class="card-body">
+								<h5 class="card-title text-danger">Process & Training Videos</h5>
+								<p class="card-text">Time is money, and if you are training employees or clients on doing the same things over and over, then your company may benefit greatly from a training or process video.</p>
+								<a href="./services.html#training" class="btn cta-btn">SEE MORE</a>
+							</div>
+						</div>
+					</div>
+					<!-- Services Video Bus. Card -->
+					<div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in" data-aos-duration="1250">
+						<div class="card">
+							<img src="img/v_faq.png" class="card-img-top" alt="thumbnail for FAQ video card" />
+							<div class="card-body">
+								<h5 class="card-title text-danger">F.A.Q. Videos</h5>
+								<p class="card-text">No matter what your company does, you're going to get the same questions over and over again.  F.A.Q. videos can save your staff tons of time! In the business world, we all know what time is. </p>
+								<a href="./services.html#faq" class="btn cta-btn">SEE MORE</a>
+							</div>
+						</div>
+					</div>
+					<!-- Services Item -->
+					<div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in" data-aos-duration="1250">
+						<div class="card">
+							<img src="img/v_sales.png" class="card-img-top" alt="thumbnail for sales video card" />
+							<div class="card-body">
+								<h5 class="card-title text-danger">Sales Videos</h5>
+								<p class="card-text">Sales videos can be a great asset in your sales funnel to reach out to the masses
+									at the top of your funnel or as a product and or service highlight video to close a
+									prospect that might be on the fence.
+									</p>
+								<a href="./services.html#sales" class="btn cta-btn">SEE MORE</a>
+							</div>
+						</div>
+					</div>
+					<!-- Services Item -->
+					<div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in" data-aos-duration="1250">
+						<div class="card">
+							<img src="img/v_ads.png" class="card-img-top" alt="thumbnail for video ad card" />
+							<div class="card-body">
+								<h5 class="card-title text-danger">Video Ads</h5>
+								<p class="card-text">Running a promotion? This genre of video can be a one off promo or a video
+									that runs every memorial day.</p>
+								<a href="./services.html#ads" class="btn cta-btn">SEE MORE</a>
+							</div>
+						</div>
+					</div>
+					<!-- Services Item -->
+					<div class="col-md-6 col-lg-3 mb-4" data-aos="zoom-in" data-aos-duration="1250">
+						<div class="card">
+							<img src="img/v_social_media.png" class="card-img-top" alt="thumbnail for social media video card" />
+							<div class="card-body">
+								<h5 class="card-title text-danger">Social Media Videos</h5>
+								<p class="card-text">Know your customer and where they spend their time.</p>
+								<a href="./services.html#social_media" class="btn cta-btn">SEE MORE</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+
+		<!-- FOOTER SECTION START -->
+		<footer class="footer py-5">
+			<div class="container" data-aos="zoom-in-up" data-aos-duration="1250">
+				<div class="row">
+					<!-- About Section -->
+					<div class="col-md-4 mb-4">
+						<h5 class="text-danger">About Us</h5>
+						<p class="text-white">
+							The Faulty Filter Company simplifies marketing and sales funnels into actionable strategies. Let us help you connect with your audience.
+						</p>
+						<p class="text-white">
+							<strong>Phone:</strong> <a href="tel:+1234567890" class="text-danger">+1 (330) 888-5406</a><br />
+						</p>
+						<a href="./contact.html" class="btn cta-btn">Get In Touch</a>
+					</div>
+
+
+					<!-- Quick Links Section -->
+					<div class="col-md-4 mb-4">
+						<h5 class="text-danger">Quick Links</h5>
+						<ul class="list-unstyled">
+							<li><a href="./index.html" class="text-white">Home</a></li>
+							<li><a href="./approach.html" class="text-white">Our Approach</a></li>
+							<li><a href="./services.html" class="text-white">Services</a></li>
+						</ul>
+						<h5 class="text-danger">Social Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://www.youtube.com/@TheFaultyFilterCompany" class="text-danger me-2"><i class="fab fa-youtube text-white icon-glow"></i></a></li>
+        </ul>
+					</div>
+
+					<!-- Google Map Section -->
+					<div class="col-md-4 mb-4">
+						<h5 class="text-danger">Our Location</h5>
+						<div class="google-map">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18914.919376726334!2d-81.87994514544992!3d41.13817130581856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830f776c47f196b%3A0x925cfdd657312c27!2sMedina%2C%20OH%2044256%2C%20USA!5e0!3m2!1sen!2sus!4v1690478408541!5m2!1sen!2sus"
+								width="100%"
+								height="200"
+								style="border:0;"
+								allowfullscreen=""
+								loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"
+							>
+							</iframe>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- Footer Bottom -->
+				<div class="row mt-4">
+					<div class="col text-center">
+						<p class="text-white mb-0">&copy; <span id="currentYear"></span> The Faulty Filter Company. All Rights Reserved.</p>
+						<div class="social-links mt-3">
+							<!-- <a href="#" class="text-danger me-2"><i class="fab fa-facebook-f"></i></a> -->
+							<!-- <a href="#" class="text-danger me-2"><i class="fab fa-instagram"></i></a> -->
+							<!-- <a href="#" class="text-danger me-2"><i class="fab fa-tiktok"></i></a> -->
+							<!-- <a href="#" class="text-danger me-2"><i class="fab fa-linkedin-in"></i></a> -->
+							<!-- <a href="https://www.youtube.com/@TheFaultyFilterCompany" class="text-danger me-2"><i class="fab fa-youtube text-white icon-glow"></i></a> -->
+							<!-- <a href="#" class="text-danger"><i class="fab fa-twitter"></i></a> -->
+						</div>
+					</div>
+				</div>
+				<p>
+					Website powered by 
+					<a href="https://8bithive.com" class="text-warning" target="_blank">
+						<strong>8-Bit Hive Technology, LLC</strong>
+					</a>
+					<img src="./img/8bh_small.png" alt="Company Logo" width="20">
+				</p>
+				
+			</div>
+		</footer>
+		<!-- FOOTER SECTION END -->
+
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			document.getElementById("currentYear").textContent = new Date().getFullYear();
+		</script>		
+		<script src="js/aos.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script>
+			AOS.init();
+		</script>
+		<script src="js/playButton.js"></script>
+	</body>
+</html>
