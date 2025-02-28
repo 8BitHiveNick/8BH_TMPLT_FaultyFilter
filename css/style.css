@@ -1118,3 +1118,39 @@ svg:hover #lineTwo {
   position: relative;
   z-index: 2; /* Ensure content is above overlay */
 }
+
+@media (max-width: 768px) {
+  .services-section .row {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  /* Ensure text & button come first */
+  .services-section .row .text-content {
+    order: 1 !important;
+  }
+
+  /* Ensure button stays with text */
+  .services-section .row .text-content .cta-btn {
+    display: block;
+    margin-top: 10px;
+  }
+
+  /* Ensure video always appears below */
+  .services-section .row .video-content {
+    order: 2 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ensure buttons do not stretch full width */
+  .services-section .row .text-content .cta-btn {
+    display: inline-block !important; /* Keeps button to its original width */
+    margin-top: 10px; /* Adds space between text and button */
+  }
+
+  /* Add spacing between button and video */
+  .services-section .row .video-content {
+    margin-top: 20px !important; /* Ensures space between button and video */
+  }
+}
