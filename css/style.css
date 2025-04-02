@@ -1154,3 +1154,7 @@ svg:hover #lineTwo {
     margin-top: 20px !important; /* Ensures space between button and video */
   }
 }
+
+#play {
+  outline: 1px solid red;
+}
